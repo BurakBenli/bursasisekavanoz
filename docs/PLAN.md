@@ -1,6 +1,16 @@
 # Plan – kod yazmadan önce
 
-Sürüm 1 · 21 Ekim 2026 · `PROMPT.md` bölüm 1, madde 4'e yanıt. **Onay bekliyor.**
+Sürüm 2 · 21 Ekim 2026 · `PROMPT.md` bölüm 1, madde 4'e yanıt.
+
+## Durum ve kararlar
+
+| Faz | Durum |
+| --- | --- |
+| 1. Kurulum | **Onaylandı** (veritabanısız; PostgreSQL Faz 2b'ye kaldı) |
+| 2a. Veri – veritabanından bağımsız kısım | Kademe fiyatı ve fiyat aralığı, arama sorgusu ayrıştırıcı + birim testleri. **Onay bekliyor** |
+| 2b. Veri – şema, seed, sorgular | PostgreSQL kurulumu ve yeni paket (SPEC 8 + `urunler.json`) bekleniyor |
+
+Bölüm 6'daki 8 soruda öneriler kabul edildi (21 Ekim 2026): veritabanı PostgreSQL (kurulum ertelendi); şablon davranışı kodda, içerik panelde; teklif formunda ürün ya da not zorunlu; `TKL-2026-00001` teklif numarası; panelde "İçerik" altında Sayfalar, Referanslar, Kendi Ürünlerimiz; fiyatsız seçenekte "Fiyat için teklif isteyin"; analitik GA4, yalnızca çerez onayından sonra.
 
 > **Eksik paket.** `PROMPT.md` paketin yeni sürümüne göre yazılmış; klasördeki paket 19 Ekim sürümü. Eksikler: 19 ekran (`Anasayfa*`, `Sise*`, `Kavanoz*`, `Kapak*`, `Bidon*`, `Referanslar*`, `Iletisim*`), `araclar/` (`README.md`, `fotograf_hazirla.py`), `TASARIM.md` bölüm 10, SPEC'in yeni 6.1 / 6.2 / 8 bölümleri, `urunler.json`'daki yeni listeler (`siseTurleri`, `kavanozTurleri`, `kapakTurleri`, `bidonTurleri`, `kullanimEtiketleri`, `kapakRenkleri`, `satisBirimleri`, `bidonTipleri`). Bu plan eldeki paket + `PROMPT.md` ile yazıldı; yeni paket gelince ilgili yerler güncellenecek (bkz. soru 2).
 
