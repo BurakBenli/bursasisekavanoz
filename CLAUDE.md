@@ -22,6 +22,14 @@ Cam ve plastik ambalaj ürünleri için ürün tanıtım + teklif sitesi ve tek 
 - Sırlar `.env` içinde; `.env.example` her zaman güncel.
 - **Docker yok** (`PROMPT.md`): geliştirmede bilgisayardaki PostgreSQL (`DATABASE_URL`, testlerde `DATABASE_URL_TEST`); üretimde Ubuntu + Node.js LTS + PostgreSQL + PM2 + Nginx. `docs/SPEC.md` ve `README.md`'deki Docker geçen satırlar geçersiz.
 - Faz planı, kategori şablonu tasarımı ve açık sorular: `docs/PLAN.md`.
+- Next.js 16.4 kullanılıyor (Cache Components açık; `middleware` yerine `proxy.ts`). API'ler eğitim verisinden farklı olabilir: kod yazmadan önce `node_modules/next/dist/docs/` içindeki ilgili belgeyi oku (`AGENTS.md`).
+- Yer tutucuları JSX metnine değil sabit dizgeye yaz (`const X = "[DOLDURULACAK: …]"`); biçimlendirici metni bölebilir.
 
 ## Komutlar
-Kurulumdan sonra burayı gerçek komutlarla güncelle: `dev`, `build`, `lint`, `typecheck`, `test`, `test:e2e`, `seed`, `admin:create`, `check:placeholders`.
+Ayrıntı: `docs/KURULUM.md`.
+- `npm run dev` – geliştirme sunucusu (localhost:3000; `/stil-rehberi` token'ları gösterir)
+- `npm run build` / `npm run start` – üretim derlemesi / çalıştırma
+- `npm run lint` · `npm run typecheck` · `npm test` (Vitest) · `npm run test:e2e` (Playwright, kurulu Google Chrome; ekran görüntüleri `test-results/ekranlar/`)
+- `npm run format` – Prettier (belgeler, tasarım ve veri hariç)
+- `npm run check:placeholders` – kalan yer tutucular (`-- --strict` yayın öncesi)
+- `npm run seed` (Faz 2) · `npm run admin:create` (Faz 5) – henüz yok

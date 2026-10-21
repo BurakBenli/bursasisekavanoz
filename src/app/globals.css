@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Tasarım token'ları – kaynak: docs/TASARIM.md bölüm 2–5 */
+@theme {
+  /* Site (sıcak, doğal) */
+  --color-brand: #1d6a39;
+  --color-brand-dark: #134c28;
+  --color-brand-soft: #e6f0e9;
+  --color-brand-line: #b9d3c1;
+  --color-ink: #17201b;
+  --color-ink-2: #3d4a42;
+  --color-muted: #5a5f55;
+  --color-ground: #f5f2ec;
+  --color-card: #fffdf9;
+  --color-card-line: #e4dccd;
+  --color-stone-1: #e9e3d7;
+  --color-stone-2: #e4ded3;
+  --color-stone-3: #ece6db;
+  --color-caption: #6b5b3e;
+  --color-input-line: #cfc6b6;
+  --color-band: #eae4d8;
+  --color-soldout: rgb(198 40 40 / 0.8);
+  --color-soldout-line: rgb(198 40 40 / 0.72);
+  --color-skeleton-1: #ece6db;
+  --color-skeleton-2: #e6e0d5;
+  --color-toast: #17201b;
+  --color-toast-action: #a7e3ba;
+
+  /* Panel (sade, serin) */
+  --color-muted-panel: #56635b;
+  --color-panel-ground: #f4f6f3;
+  --color-panel-line: #dce3dd;
+  --color-panel-input: #c9d2cb;
+  --color-panel-sidebar: #134c28;
+  --color-panel-sidebar-text: #e3eee6;
+
+  /* Durum renkleri */
+  --color-warn-line: #d9a441;
+  --color-warn-bg: #fcefd9;
+  --color-warn-text: #7a4300;
+  --color-error-line: #b3261e;
+  --color-error-bg: #fbeae7;
+  --color-error-text: #8a1f12;
+  --color-soldout-panel-line: #c62828;
+  --color-soldout-panel-bg: #fdf0ef;
+  --color-soldout-panel-text: #a3261a;
+
+  /* Biçim */
+  --radius-card: 20px;
+  --radius-card-tablet: 18px;
+  --radius-card-mobile: 16px;
+  --radius-filter: 18px;
+  --radius-control: 10px;
+  --radius-panel-card: 14px;
+  --shadow-float: 0 10px 24px rgb(19 76 40 / 0.32);
+
+  /* Kırılma noktaları: mobil < 640, tablet 640–1023, bilgisayar ≥ 1024 */
+  --breakpoint-tablet: 40rem;
+  --breakpoint-desktop: 64rem;
+
+  /* En geniş içerik 1376 px */
+  --container-content: 86rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-ground);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* İçerik kabı: 1376 px, kenar boşluğu 32 / 24 / 16 px */
+@utility content-wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--container-content);
+  padding-inline: 16px;
+  @variant tablet {
+    padding-inline: 24px;
+  }
+  @variant desktop {
+    padding-inline: 32px;
+  }
+}

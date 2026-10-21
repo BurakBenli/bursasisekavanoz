@@ -1,0 +1,28 @@
+# bağımlılıklar
+/node_modules
+
+# next.js
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# testler
+/coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# yüklenen dosyalar (sunucuda kalıcı dizin, yedeğe girer)
+/uploads/
+
+# ortam değişkenleri (örnek dosya hariç)
+.env*
+!.env.example
+
+# diğer
+.DS_Store
+*.pem
+npm-debug.log*

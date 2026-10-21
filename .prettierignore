@@ -1,0 +1,10 @@
+# Belgeler, tasarım ve kaynak veri elle yazılır; biçimlendirilmez.
+docs/
+tasarim/
+data/
+public/
+*.md
+package-lock.json
+.next/
+test-results/
+playwright-report/
