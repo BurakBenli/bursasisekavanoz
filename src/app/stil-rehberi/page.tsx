@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import catalog from "../../../data/urunler.json";
 import { formatPrice, formatPriceFrom, formatPriceRange, formatVolume } from "@/lib/format";
+import { PricingDemo, SearchDemo, type DemoProduct } from "./demos";
+
+// Faz 2b'de veritabanından gelecek; şimdilik örnek veri.
+const demoProducts: DemoProduct[] = catalog.urunler.map((p) => ({
+  id: p.id,
+  name: p.ad,
+  tierStarts: p.kademeSinirlari,
+  options: p.secenekler.map((o) => ({ name: o.ad, prices: o.fiyatlar })),
+}));
+
+const demoSynonyms = catalog.tanimlar.aramaEsAnlamlilari.map((s) => ({ word: s.kelime, meaning: s.anlam }));
 
 // Geliştirme sayfası: TASARIM.md token'larının sitedeki karşılığı.
 // Üretimde kapalı; testler SHOW_STYLE_GUIDE=1 ile açar.
@@ -160,6 +172,22 @@ export default function StyleGuidePage() {
             {formatVolume(105)} · {formatVolume(20000, "l")}
           </dd>
         </dl>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-bold">Kademe fiyatı (Faz 2a)</h2>
+        <p className="mt-1 text-sm text-muted">
+          Örnek veriden 5 ürün. Fiyatı girilmemiş seçeneklerde &quot;Fiyat için teklif isteyin&quot; çıkar.
+        </p>
+        <PricingDemo products={demoProducts} />
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xl font-bold">Arama ayrıştırıcı (Faz 2a)</h2>
+        <p className="mt-1 text-sm text-muted">
+          Sorgunun nasıl anlaşıldığı. Yazım hatası toleransı veritabanıyla (Faz 2b) gelecek.
+        </p>
+        <SearchDemo synonyms={demoSynonyms} />
       </section>
     </main>
   );
