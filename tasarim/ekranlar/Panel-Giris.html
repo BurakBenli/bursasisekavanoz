@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yönetim paneli – giriş</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D6A39}a:hover{color:#134C28}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+input::placeholder{color:#7A7E74}
+:focus-visible{outline:2px solid #1D6A39;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 900px; display: flex; flex-wrap: wrap; background: #F5F2EC; font-family: 'IBM Plex Sans', sans-serif; color: #17201B">
+
+<svg width="0" height="0" aria-hidden="true" style="position: absolute; overflow: hidden">
+<defs>
+<filter id="g-leke" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="4" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.52  0 0 0 0 0.46  0 0 0 0 0.38  1.7 0 0 0 -0.62"></feColorMatrix></filter>
+<filter id="g-damar" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.006 0.02" numOctaves="3" seed="11"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 0.99  0 0 0 0 0.96  -2.4 0 0 0 0.42"></feColorMatrix></filter>
+<filter id="g-kum" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="1" seed="2"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.31  0 0 0 0 0.25  5 0 0 0 -2.85"></feColorMatrix></filter>
+<linearGradient id="g-seffaf" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#B9CACB" stop-opacity="0.85"></stop><stop offset="0.3" stop-color="#F2F8F8" stop-opacity="0.55"></stop><stop offset="0.7" stop-color="#DCE8E9" stop-opacity="0.5"></stop><stop offset="1" stop-color="#A9BDBF" stop-opacity="0.9"></stop></linearGradient>
+<linearGradient id="g-amber" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#5E2C0B"></stop><stop offset="0.32" stop-color="#B0621F"></stop><stop offset="0.7" stop-color="#8E4715"></stop><stop offset="1" stop-color="#4E230A"></stop></linearGradient>
+<linearGradient id="g-buzlu" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#D3D8D7"></stop><stop offset="0.3" stop-color="#F6F7F6"></stop><stop offset="0.7" stop-color="#E8EBEA"></stop><stop offset="1" stop-color="#C7CDCC"></stop></linearGradient>
+<linearGradient id="g-gold" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#86651F"></stop><stop offset="0.35" stop-color="#EAD28E"></stop><stop offset="0.65" stop-color="#B8963F"></stop><stop offset="1" stop-color="#7A5B1B"></stop></linearGradient>
+<linearGradient id="g-siyah" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#121212"></stop><stop offset="0.35" stop-color="#4B4B4B"></stop><stop offset="0.65" stop-color="#2A2A2A"></stop><stop offset="1" stop-color="#0E0E0E"></stop></linearGradient>
+<linearGradient id="g-beyaz" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#D2D1CC"></stop><stop offset="0.35" stop-color="#FFFFFF"></stop><stop offset="0.65" stop-color="#EEEDE9"></stop><stop offset="1" stop-color="#C6C5C0"></stop></linearGradient>
+<radialGradient id="g-golge" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#3B3226" stop-opacity="0.35"></stop><stop offset="1" stop-color="#3B3226" stop-opacity="0"></stop></radialGradient>
+</defs>
+</svg>
+
+<div style="flex: 1 1 520px; min-width: 0; box-sizing: border-box; padding: 40px 48px; background: #134C28; color: #FFFFFF; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: center; gap: 12px">
+<img src="/_blob/3d63a14d53f9b8a802afd90628bcd3b6" alt="" width="48" height="48" style="width: 48px; height: 48px; display: block; border-radius: 24px; background: #FFFFFF">
+<span style="display: flex; flex-direction: column; line-height: 1.25"><span style="font-size: 18px; font-weight: 700">Bursa Şişe Kavanoz</span><span style="font-size: 13.5px; color: #B9D3C1">Yönetim paneli</span></span>
+</div>
+<div style="flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; gap: 28px">
+<div style="position: relative; height: 300px; border-radius: 24px; overflow: hidden; max-width: 560px">
+<svg aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"><rect width="100%" height="100%" fill="#E9E3D7"></rect><rect width="100%" height="100%" filter="url(#g-leke)"></rect><rect width="100%" height="100%" filter="url(#g-damar)"></rect><rect width="100%" height="100%" filter="url(#g-kum)"></rect></svg>
+<div style="position: absolute; left: 0; right: 0; bottom: 24px; display: flex; justify-content: center; align-items: flex-end; gap: 8px">
+<svg viewBox="0 0 120 160" aria-hidden="true" width="130" height="173"><ellipse cx="60" cy="149" rx="38" ry="6" fill="url(#g-golge)"></ellipse><rect x="34" y="20" width="52" height="20" rx="3" fill="url(#g-gold)"></rect><path d="M34 25H86M34 30H86M34 35H86" stroke="#000000" stroke-opacity="0.12" stroke-width="0.8"></path><rect x="37" y="40" width="46" height="6" rx="1" fill="url(#g-seffaf)" stroke="#6E7F80" stroke-opacity="0.35" stroke-width="0.8"></rect><path d="M31 52Q31 46 38 46H82Q89 46 89 52V140Q89 148 81 148H39Q31 148 31 140Z" fill="url(#g-seffaf)" stroke="#6E7F80" stroke-opacity="0.4"></path><rect x="38" y="55" width="6" height="84" rx="3" fill="#FFFFFF" fill-opacity="0.6"></rect></svg>
+<svg viewBox="0 0 120 160" aria-hidden="true" width="110" height="147"><ellipse cx="60" cy="149" rx="34" ry="6" fill="url(#g-golge)"></ellipse><path d="M53 16Q53 8 60 8Q67 8 67 16V40H53Z" fill="url(#g-siyah)"></path><rect x="47" y="40" width="26" height="16" rx="2" fill="url(#g-gold)"></rect><rect x="53" y="56" width="14" height="8" fill="url(#g-amber)"></rect><path d="M39 76Q39 64 52 64H68Q81 64 81 76V141Q81 148 74 148H46Q39 148 39 141Z" fill="url(#g-amber)" stroke="#3A1A06" stroke-opacity="0.4"></path><rect x="45" y="74" width="5" height="64" rx="2.5" fill="#FFFFFF" fill-opacity="0.35"></rect></svg>
+<svg viewBox="0 0 120 160" aria-hidden="true" width="120" height="160"><ellipse cx="60" cy="149" rx="42" ry="6" fill="url(#g-golge)"></ellipse><rect x="22" y="84" width="76" height="24" rx="5" fill="url(#g-beyaz)" stroke="#8F8D86" stroke-opacity="0.35"></rect><path d="M24 112Q24 108 29 108H91Q96 108 96 112V140Q96 148 88 148H32Q24 148 24 140Z" fill="url(#g-buzlu)" stroke="#8C9493" stroke-opacity="0.45"></path><rect x="31" y="113" width="5" height="30" rx="2.5" fill="#FFFFFF" fill-opacity="0.6"></rect></svg>
+</div>
+</div>
+<div style="max-width: 520px">
+<h2 style="margin: 0 0 10px; font-size: 28px; line-height: 1.25; font-weight: 700">Ürün, kategori ve fiyatları tek yerden yönetin</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #D7E6DB">Değişiklikler kaydettiğiniz anda sitede görünür. Gizlediğiniz ürün silinmez, istediğinizde geri açılır.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #B9D3C1">Bu ekran yalnızca site yöneticisi içindir.</p>
+</div>
+
+<main style="flex: 1 1 520px; min-width: 0; box-sizing: border-box; padding: 40px 24px; display: flex; align-items: center; justify-content: center">
+<div style="width: 100%; max-width: 420px; box-sizing: border-box; padding: 36px 32px; background: #FFFDF9; border: 1px solid #E4DCCD; border-radius: 20px; box-shadow: 0 18px 40px rgba(60, 48, 30, 0.08)">
+<h1 style="margin: 0 0 6px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">Panele giriş</h1>
+<p style="margin: 0 0 24px; font-size: 15px; color: #5A5F55">Yönetici e-posta adresiniz ve şifrenizle girin.</p>
+
+<sc-if value="{{hata}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 18px; padding: 12px 14px; border-radius: 12px; background: #FBEAE7; color: #8A1F12; font-size: 14.5px; line-height: 1.45">
+<svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" style="margin-top: 1px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>
+<span>E-posta veya şifre hatalı. 2 deneme hakkınız kaldı.</span>
+</div>
+</sc-if>
+<sc-if value="{{kilit}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="display: flex; gap: 10px; align-items: flex-start; margin-bottom: 18px; padding: 12px 14px; border-radius: 12px; background: #FCEFD9; color: #6B3A00; font-size: 14.5px; line-height: 1.45">
+<svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" style="margin-top: 1px"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+<span>5 hatalı deneme yapıldı. Güvenlik için giriş 15 dakika kapatıldı ve kayıtlı e-postanıza bilgi gönderildi.</span>
+</div>
+</sc-if>
+
+<form style="display: flex; flex-direction: column; gap: 16px">
+<div>
+<label for="g-eposta" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">E-posta</label>
+<input id="g-eposta" type="email" autocomplete="username" value="{{eposta}}" onChange="{{onEposta}}" placeholder="yonetici@alanadiniz.com" style="width: 100%; box-sizing: border-box; height: 48px; padding: 0 14px; border: 1.5px solid {{cizgi}}; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15.5px; color: #17201B">
+</div>
+<div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px">
+<label for="g-sifre" style="font-size: 14px; font-weight: 600">Şifre</label>
+<a href="#" style="font-size: 13.5px; font-weight: 500">Şifremi unuttum</a>
+</div>
+<div style="display: flex; align-items: center; height: 48px; border: 1.5px solid {{cizgi}}; border-radius: 10px; background: #FFFFFF; overflow: hidden">
+<input id="g-sifre" type="{{sifreTip}}" autocomplete="current-password" value="{{sifre}}" onChange="{{onSifre}}" onKeyUp="{{onTus}}" style="flex: 1; min-width: 0; height: 100%; box-sizing: border-box; padding: 0 14px; border: 0; background: transparent; font: inherit; font-size: 15.5px; color: #17201B; outline-offset: -2px">
+<button type="button" onClick="{{tGoster}}" aria-label="{{gosterEtiket}}" aria-pressed="{{goster}}" style="flex: none; width: 48px; height: 100%; display: flex; align-items: center; justify-content: center; border: 0; border-left: 1px solid #ECE5D8; background: transparent; color: #3D4A42; cursor: pointer">
+<sc-if value="{{gizli}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></sc-if>
+<sc-if value="{{goster}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M17.9 17.9A10.1 10.1 0 0 1 12 20c-7 0-11-8-11-8a18.5 18.5 0 0 1 5.1-5.9M9.9 4.2A9.1 9.1 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.2 3.2M14.1 14.1a3 3 0 1 1-4.2-4.2M1 1l22 22"></path></svg></sc-if>
+</button>
+</div>
+<sc-if value="{{caps}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 6px 0 0; font-size: 13px; font-weight: 600; color: #6B3A00">Caps Lock açık.</p>
+</sc-if>
+</div>
+<label style="display: flex; align-items: center; gap: 10px; min-height: 40px; font-size: 14.5px; cursor: pointer">
+<input type="checkbox" style="width: 18px; height: 18px; margin: 0; accent-color: #1D6A39; flex: none">Bu cihazda 30 gün oturumum açık kalsın
+</label>
+<sc-if value="{{acik}}" hint-placeholder-val="{{ true }}">
+<a href="Panel-Ozet.dc.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; height: 50px; border-radius: 10px; background: #1D6A39; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600">Giriş yap<svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+</sc-if>
+<sc-if value="{{kilit}}" hint-placeholder-val="{{ false }}">
+<button type="button" disabled="{{ true }}" style="height: 50px; border: 0; border-radius: 10px; background: #D8D3C8; color: #4A4D45; font: inherit; font-size: 16px; font-weight: 600">14:47'de tekrar deneyebilirsiniz</button>
+</sc-if>
+</form>
+
+<div style="display: flex; gap: 10px; align-items: flex-start; margin-top: 24px; padding-top: 18px; border-top: 1px solid #ECE5D8; font-size: 13px; line-height: 1.5; color: #5A5F55">
+<svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" style="margin-top: 1px; color: #1D6A39"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+<span>Bağlantınız şifrelidir. Hatalı denemeler kaydedilir; 5 hatadan sonra giriş 15 dakika kapanır.</span>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"durum":{"editor":"enum","options":["normal","hata","kilit"],"default":"normal"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const set = (p) => this.setState(p);
+    const durum = this.props.durum || 'normal';
+    const goster = !!s.goster;
+    return {
+      hata: durum === 'hata',
+      kilit: durum === 'kilit',
+      acik: durum !== 'kilit',
+      cizgi: durum === 'hata' ? '#B3261E' : '#CFC6B6',
+      eposta: s.eposta ?? '',
+      onEposta: (e) => set({ eposta: e.target.value }),
+      sifre: s.sifre ?? '',
+      onSifre: (e) => set({ sifre: e.target.value }),
+      onTus: (e) => set({ caps: !!(e.getModifierState && e.getModifierState('CapsLock')) }),
+      caps: !!s.caps,
+      goster: goster,
+      gizli: !goster,
+      sifreTip: goster ? 'text' : 'password',
+      gosterEtiket: goster ? 'Şifreyi gizle' : 'Şifreyi göster',
+      tGoster: () => set({ goster: !goster })
+    };
+  }
+}
+</script>
+</body>
+</html>

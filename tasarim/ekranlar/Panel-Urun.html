@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yönetim paneli – ürün düzenleme</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D6A39}a:hover{color:#134C28}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+input::placeholder,textarea::placeholder{color:#8A968E}
+:focus-visible{outline:2px solid #1D6A39;outline-offset:2px}
+</style>
+</helmet>
+<div style="min-height: 3100px; display: flex; flex-wrap: wrap; background: #F4F6F3; font-family: 'IBM Plex Sans', sans-serif; color: #17201B">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute; overflow: hidden"><defs><filter id="p-leke" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="4" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.52  0 0 0 0 0.46  0 0 0 0 0.38  1.7 0 0 0 -0.62"></feColorMatrix></filter><filter id="p-kum" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="1" seed="2"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.31  0 0 0 0 0.25  5 0 0 0 -2.85"></feColorMatrix></filter><linearGradient id="p-seffaf" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#B9CACB" stop-opacity="0.85"></stop><stop offset="0.3" stop-color="#F2F8F8" stop-opacity="0.55"></stop><stop offset="0.7" stop-color="#DCE8E9" stop-opacity="0.5"></stop><stop offset="1" stop-color="#A9BDBF" stop-opacity="0.9"></stop></linearGradient><linearGradient id="p-gumus" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#7E8487"></stop><stop offset="0.35" stop-color="#E9ECED"></stop><stop offset="0.65" stop-color="#B3B8BA"></stop><stop offset="1" stop-color="#6F7578"></stop></linearGradient><radialGradient id="p-golge" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#3B3226" stop-opacity="0.35"></stop><stop offset="1" stop-color="#3B3226" stop-opacity="0"></stop></radialGradient></defs></svg>
+
+<aside style="flex: 1 1 220px; box-sizing: border-box; padding: 20px 12px; background: #134C28; color: #FFFFFF; display: flex; flex-direction: column; gap: 4px">
+<a href="Panel-Ozet.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px; color: #FFFFFF; text-decoration: none">
+<img src="/_blob/3d63a14d53f9b8a802afd90628bcd3b6" alt="" width="38" height="38" style="width: 38px; height: 38px; display: block; border-radius: 19px; background: #FFFFFF">
+<span style="display: flex; flex-direction: column; line-height: 1.25"><span style="font-size: 15px; font-weight: 700">Bursa Şişe Kavanoz</span><span style="font-size: 12.5px; color: #B9D3C1">Yönetim paneli</span></span>
+</a>
+<nav aria-label="Yönetim menüsü" style="display: flex; flex-direction: column; gap: 2px">
+<a href="Panel-Ozet.dc.html" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>Genel bakış</a>
+<a href="Panel-Urun.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.14); color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"></path><path d="M3.3 7L12 12l8.7-5M12 22V12"></path></svg>Ürünler</a>
+<a href="Panel-Kategori.dc.html" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Kategoriler</a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg><span style="flex: 1">Teklif talepleri</span><span style="min-width: 22px; height: 22px; padding: 0 7px; box-sizing: border-box; border-radius: 11px; background: #D9A441; color: #17201B; font-size: 12px; font-weight: 700; line-height: 22px; text-align: center">3</span></a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Tanımlı listeler</a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M4 9h16M9 9v11"></path></svg>Sayfalar</a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"></path></svg>Ayarlar</a>
+</nav>
+<span style="flex: 1 0 24px"></span>
+<a href="Kategori-Liste.dc.html" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 14.5px"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>Siteyi görüntüle</a>
+<div style="display: flex; align-items: center; gap: 10px; padding: 12px; margin-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.16)">
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #E6F0E9; color: #134C28; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">Y</span>
+<span style="display: flex; flex-direction: column; line-height: 1.25"><span style="font-size: 14px; font-weight: 600">Yönetici</span><a href="Panel-Giris.dc.html" style="font-size: 12.5px; color: #B9D3C1">Çıkış yap</a></span>
+</div>
+</aside>
+
+<div style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column">
+<header style="padding: 18px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; background: #FFFFFF; border-bottom: 1px solid #DCE3DD">
+<div>
+<p style="margin: 0 0 2px; font-size: 14px; color: #56635B"><a href="Panel-Kategori.dc.html" style="color: #56635B">Ürünler</a> › Kavanoz › Cam kavanozlar – kapaklı</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em">370 cc Uzun Cam Kavanoz</h1>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 999px; background: {{pillZemin}}; color: {{pillYazi}}; font-size: 13px; font-weight: 600"><span style="width: 7px; height: 7px; border-radius: 4px; background: {{pillNokta}}"></span>{{pillMetin}}</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="Urun-Detay.dc.html" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #C9D2CB; border-radius: 10px; box-sizing: border-box; color: #17201B; text-decoration: none; font-size: 15px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>Önizle</a>
+<button type="button" onClick="{{kaydet}}" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; border: 0; border-radius: 10px; background: #1D6A39; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Kaydet</button>
+</div>
+</header>
+
+<nav aria-label="Ürün bölümleri" style="padding: 12px 32px; display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; border-bottom: 1px solid #DCE3DD">
+<a href="#temel" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #E6F0E9; color: #134C28; text-decoration: none; font-size: 13.5px; font-weight: 600">Temel bilgiler</a>
+<a href="#kategoriler" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Kategoriler</a>
+<a href="#ozellikler" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Özellikler</a>
+<a href="#secenekler" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Seçenekler ve fiyat</a>
+<a href="#takim" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Takım parçaları</a>
+<a href="#medya" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Fotoğraf ve video</a>
+<a href="#aciklama" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Açıklama</a>
+<a href="#uyumlu" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">Uyumlu ürünler</a>
+<a href="#seo" style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F0F3F0; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 500">SEO</a>
+</nav>
+
+<main style="padding: 24px 32px 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+
+<section id="temel" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600">Temel bilgiler</h2>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><label for="u-ad" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ürün adı</label><input id="u-ad" type="text" value="370 cc Uzun Cam Kavanoz" style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"><p style="margin: 6px 0 0; font-size: 13px; color: #56635B">Ölçü, renk ve kapak bilgisi ada değil, aşağıdaki özellik ve seçenek alanlarına yazılır.</p></div>
+<div><label for="u-kisa" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Kısa açıklama <span style="font-weight: 400; color: #56635B">(listelerde ve aramada görünür)</span></label><input id="u-kisa" type="text" value="63 mm twist-off ağızlı, 370 ml uzun tip cam kavanoz. Metal ve plastik kapak seçenekleriyle." style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"></div>
+</div>
+</section>
+
+<section id="kategoriler" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 6px; font-size: 18px; font-weight: 600">Kategoriler</h2>
+<p style="margin: 0 0 16px; font-size: 14px; color: #56635B">Ana ve alt kategori ürünün sitedeki yerini ve adresini belirler. Listede olmayan kategoriyi <a href="Panel-Kategori.dc.html">Kategoriler</a> ekranından ekleyin.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 18px">
+<div><label for="k-ana" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ana kategori</label><select id="k-ana" value="{{ana}}" onChange="{{onAna}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="sise">Şişe</option><option value="kavanoz">Kavanoz</option><option value="kapak">Kapak</option><option value="sprey">Sprey - Pompa</option><option value="kapson">Kapşon - Emniyet Bandı</option><option value="kozmetik">Kozmetik Ambalaj</option><option value="lab">Laboratuvar</option><option value="hacamat">Hacamat</option><option value="teshir">Teşhir</option><option value="bidon">Bidon</option><option value="muhtelif">Muhtelif</option><option value="kova">Kova</option><option value="teneke">Teneke</option><option value="enjektor">Enjektör</option></select></div>
+<div><label for="k-alt" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Alt kategori</label>
+<sc-if value="{{anaSise}}" hint-placeholder-val="{{ false }}"><select id="k-alt" value="{{alt}}" onChange="{{onAlt}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="Cam Damlalıklı Şişeler">Cam Damlalıklı Şişeler</option><option value="Plastik Damlalıklı Şişeler">Plastik Damlalıklı Şişeler</option><option value="İçten Damlalıklı Şişeler">İçten Damlalıklı Şişeler</option><option value="Spreyli Cam Şişeler">Spreyli Cam Şişeler</option><option value="Spreyli Plastik Şişeler">Spreyli Plastik Şişeler</option><option value="Esans - Parfüm Şişeleri">Esans - Parfüm Şişeleri</option><option value="Akıtıcılı Cam Şişeler">Akıtıcılı Cam Şişeler</option><option value="Akıtıcılı Plastik Şişeler">Akıtıcılı Plastik Şişeler</option><option value="Mantar Tıpalı Şişeler">Mantar Tıpalı Şişeler</option><option value="Pompalı Şişeler">Pompalı Şişeler</option><option value="Kolonya Şişeleri">Kolonya Şişeleri</option><option value="Cam Şişeler - Kapaklı">Cam Şişeler - Kapaklı</option><option value="Cam Şişeler - Kapaksız">Cam Şişeler - Kapaksız</option><option value="Plastik Şişeler - Kapaklı">Plastik Şişeler - Kapaklı</option><option value="Plastik Şişeler - Kapaksız">Plastik Şişeler - Kapaksız</option></select></sc-if>
+<sc-if value="{{anaKavanoz}}" hint-placeholder-val="{{ true }}"><select id="k-alt" value="{{alt}}" onChange="{{onAlt}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="Cam Kavanozlar - Kapaklı">Cam Kavanozlar - Kapaklı</option><option value="Cam Kavanozlar - Kapaksız">Cam Kavanozlar - Kapaksız</option><option value="Plastik Kavanozlar - Kapaklı">Plastik Kavanozlar - Kapaklı</option><option value="Plastik Kavanozlar - Kapaksız">Plastik Kavanozlar - Kapaksız</option><option value="Baharat Kavanozları">Baharat Kavanozları</option></select></sc-if>
+<sc-if value="{{anaKapak}}" hint-placeholder-val="{{ false }}"><select id="k-alt" value="{{alt}}" onChange="{{onAlt}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="Metal Kapaklar">Metal Kapaklar</option><option value="Plastik Kapaklar">Plastik Kapaklar</option><option value="Plastik Tıpalar">Plastik Tıpalar</option><option value="Mantar Tıpalar">Mantar Tıpalar</option><option value="Flakon Kapaklar - Butil Tıpalar">Flakon Kapaklar - Butil Tıpalar</option><option value="Cam Damlalıklar">Cam Damlalıklar</option><option value="Çubuklar - Cam ve Plastik Pipetler">Çubuklar - Cam ve Plastik Pipetler</option><option value="Contalar">Contalar</option><option value="Ahşap Kapaklar">Ahşap Kapaklar</option></select></sc-if>
+<sc-if value="{{anaSprey}}" hint-placeholder-val="{{ false }}"><select id="k-alt" value="{{alt}}" onChange="{{onAlt}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="Spreyler">Spreyler</option><option value="Pompalar">Pompalar</option></select></sc-if>
+<sc-if value="{{anaTek}}" hint-placeholder-val="{{ false }}"><select id="k-alt" disabled="{{ true }}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B; background: #F4F6F3; color: #56635B"><option>Bu kategorinin alt kategorisi yok</option></select></sc-if>
+</div>
+</div>
+<p style="margin: 0 0 8px; font-size: 14px; font-weight: 600">Ek kategoriler <span style="font-weight: 400; color: #56635B">(ürün bu sayfalarda da görünür)</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 6px 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font-size: 14.5px; font-weight: 500; color: #17201B">Sektöre göre › Bal ve reçel<button type="button" aria-label="Ek kategoriden çıkar" style="width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 6px; background: transparent; color: #56635B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></span>
+<button type="button" style="display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border: 1px dashed #9AA59E; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 14.5px; font-weight: 600; color: #1D6A39; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Ek kategori ekle</button>
+</div>
+</section>
+
+<section id="ozellikler" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 6px; font-size: 18px; font-weight: 600">Özellikler</h2>
+<p style="margin: 0 0 16px; font-size: 14px; color: #56635B">Değerler önceden tanımlı listelerden seçilir; yazım hatası girilemez. Bu alanlar sitedeki filtreleri ve uyumlu kapak eşleştirmesini besler.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<div><label for="o-malzeme" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Malzeme</label><select id="o-malzeme" value="{{malzeme}}" onChange="{{onMalzeme}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="cam">Cam</option><option value="pet">PET</option><option value="pe">Polietilen (PE)</option><option value="pp">Polipropilen (PP)</option></select></div>
+<div><label for="o-kapak" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Kapak tipi</label><select id="o-kapak" value="{{kapakTipi}}" onChange="{{onKapakTipi}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="metal">Metal kapak</option><option value="plastik">Plastik kapak</option><option value="damlalik">Damlalık</option><option value="sprey">Sprey / tetik</option><option value="pompa">Pompa</option><option value="tipa">Tıpa</option><option value="kapaksiz">Kapaksız</option></select></div>
+<div><label for="o-hacim" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Hacim</label><select id="o-hacim" value="{{hacim}}" onChange="{{onHacim}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="3">3 ml (cc)</option><option value="5">5 ml (cc)</option><option value="10">10 ml (cc)</option><option value="15">15 ml (cc)</option><option value="20">20 ml (cc)</option><option value="30">30 ml (cc)</option><option value="50">50 ml (cc)</option><option value="75">75 ml (cc)</option><option value="100">100 ml (cc)</option><option value="105">105 ml (cc)</option><option value="212">212 ml (cc)</option><option value="244">244 ml (cc)</option><option value="250">250 ml (cc)</option><option value="340">340 ml (cc)</option><option value="370">370 ml (cc)</option><option value="375">375 ml (cc)</option><option value="425">425 ml (cc)</option><option value="500">500 ml (cc)</option><option value="720">720 ml (cc)</option><option value="1000">1000 ml (1 litre)</option></select><p style="margin: 6px 0 0; font-size: 12.5px; color: #56635B">Listede yoksa <a href="#">Tanımlı listeler</a>den ekleyin.</p></div>
+<div><label for="o-agiz" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ağız çapı</label><select id="o-agiz" value="{{agiz}}" onChange="{{onAgiz}}" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="13">13 mm</option><option value="15">15 mm</option><option value="18">18 mm</option><option value="20">20 mm</option><option value="24">24 mm</option><option value="28">28 mm</option><option value="31">31 mm</option><option value="33">33 mm</option><option value="38">38 mm</option><option value="43">43 mm</option><option value="48">48 mm</option><option value="53">53 mm</option><option value="58">58 mm</option><option value="63">63 mm</option><option value="66">66 mm</option><option value="70">70 mm</option><option value="77">77 mm</option><option value="82">82 mm</option></select></div>
+<div><label for="o-tip" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ağız tipi</label><select id="o-tip" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option>Twist-off</option><option>Vidalı</option><option>Geçme</option></select></div>
+<div><label for="o-renk" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Renk</label><select id="o-renk" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option>Şeffaf</option><option>Amber</option><option>Buzlu</option></select></div>
+<div><label for="o-sekil" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Şekil</label><select id="o-sekil" style="width: 100%; height: 44px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option>Uzun / silindir</option><option>Standart</option><option>Yassı</option></select></div>
+<div><label for="o-olcu" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ölçüler – çap × yükseklik (mm)</label><input id="o-olcu" type="text" placeholder="ör. 70 × 120" style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1.5px solid #D9A441; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"><p style="margin: 6px 0 0; font-size: 12.5px; font-weight: 600; color: #7A4300">Eksik</p></div>
+<div><label for="o-agirlik" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ağırlık (g)</label><input id="o-agirlik" type="text" style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1.5px solid #D9A441; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"><p style="margin: 6px 0 0; font-size: 12.5px; font-weight: 600; color: #7A4300">Eksik</p></div>
+<div><label for="o-koli" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Koli içi adet</label><input id="o-koli" type="text" style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1.5px solid #D9A441; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"><p style="margin: 6px 0 0; font-size: 12.5px; font-weight: 600; color: #7A4300">Eksik</p></div>
+<div><label for="o-gida" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Gıdaya uygun</label><select id="o-gida" style="width: 100%; height: 44px; padding: 0 10px; border: 1.5px solid #D9A441; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option>Seçiniz</option><option>Evet</option><option>Hayır</option></select><p style="margin: 6px 0 0; font-size: 12.5px; font-weight: 600; color: #7A4300">Eksik</p></div>
+</div>
+</section>
+
+<section id="secenekler" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px">
+<div>
+<h2 style="margin: 0 0 6px; font-size: 18px; font-weight: 600">Seçenekler ve fiyat</h2>
+<p style="margin: 0; font-size: 14px; color: #56635B; max-width: 620px">Her kapak rengi ayrı ürün değil, bu ürünün seçeneğidir. Sitede tek sayfada kapak seçimiyle gösterilir.</p>
+</div>
+<button type="button" style="display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 14.5px; font-weight: 600; color: #17201B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Seçenek ekle</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 24px; padding: 14px 16px; margin-bottom: 16px; border-radius: 10px; background: #F8FAF7">
+<div><span style="display: block; margin-bottom: 6px; font-size: 13.5px; font-weight: 600">Adet kademeleri</span><span style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 13.5px"><span style="padding: 4px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DCE3DD">1–23</span><span style="padding: 4px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DCE3DD">24–47</span><span style="padding: 4px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #DCE3DD">48 ve üzeri</span><a href="#" style="padding: 4px 6px; font-weight: 600">Düzenle</a></span></div>
+<div><label for="f-kdv" style="display: block; margin-bottom: 6px; font-size: 13.5px; font-weight: 600">Fiyat girişi</label><select id="f-kdv" style="height: 40px; padding: 0 10px; border: 1.5px solid #D9A441; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 14.5px; color: #17201B"><option>Seçiniz</option><option>KDV dahil</option><option>KDV hariç</option></select></div>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 14.5px">
+<thead>
+<tr style="text-align: left; font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; color: #56635B">
+<th scope="col" style="padding: 8px 10px; font-weight: 600">Kapak seçeneği</th><th scope="col" style="padding: 8px 10px; font-weight: 600">Stok kodu</th><th scope="col" style="padding: 8px 10px; font-weight: 600">1–23 adet</th><th scope="col" style="padding: 8px 10px; font-weight: 600">24–47 adet</th><th scope="col" style="padding: 8px 10px; font-weight: 600">48+ adet</th><th scope="col" style="padding: 8px 10px; font-weight: 600">Sitede</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-top: 1px solid #E8ECE9">
+<td style="padding: 10px; font-weight: 600">Gümüş metal kapak</td>
+<td style="padding: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3D4A42">CK022-2+MK040-4</td>
+<td style="padding: 10px"><input aria-label="Gümüş metal kapak, 1–23 adet fiyatı" type="text" value="20,82" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gümüş metal kapak, 24–47 adet fiyatı" type="text" value="19,06" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gümüş metal kapak, 48 ve üzeri adet fiyatı" type="text" value="16,41" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gümüş metal kapak sitede" type="checkbox" checked="{{ true }}" style="width: 20px; height: 20px; accent-color: #1D6A39"></td>
+</tr>
+<tr style="border-top: 1px solid #E8ECE9">
+<td style="padding: 10px; font-weight: 600">Beyaz plastik kapak + köpük conta</td>
+<td style="padding: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3D4A42">CK022-2+PLK087-8+PLK087-9</td>
+<td style="padding: 10px"><input aria-label="Beyaz plastik kapak, 1–23 adet fiyatı" type="text" value="25,33" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Beyaz plastik kapak, 24–47 adet fiyatı" type="text" value="23,09" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Beyaz plastik kapak, 48 ve üzeri adet fiyatı" type="text" value="19,65" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Beyaz plastik kapak sitede" type="checkbox" checked="{{ true }}" style="width: 20px; height: 20px; accent-color: #1D6A39"></td>
+</tr>
+<tr style="border-top: 1px solid #E8ECE9">
+<td style="padding: 10px; font-weight: 600">Siyah metal kapak</td>
+<td style="padding: 10px"><input aria-label="Siyah metal kapak stok kodu" type="text" placeholder="Stok kodu" style="width: 150px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1.5px solid #D9A441; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Siyah metal kapak, 1–23 adet fiyatı" type="text" value="20,82" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Siyah metal kapak, 24–47 adet fiyatı" type="text" placeholder="—" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Siyah metal kapak, 48 ve üzeri adet fiyatı" type="text" value="16,41" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Siyah metal kapak sitede" type="checkbox" checked="{{ true }}" style="width: 20px; height: 20px; accent-color: #1D6A39"></td>
+</tr>
+<tr style="border-top: 1px solid #E8ECE9">
+<td style="padding: 10px; font-weight: 600">Gold metal kapak</td>
+<td style="padding: 10px"><input aria-label="Gold metal kapak stok kodu" type="text" placeholder="Stok kodu" style="width: 150px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1.5px solid #D9A441; border-radius: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gold metal kapak, 1–23 adet fiyatı" type="text" value="21,07" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gold metal kapak, 24–47 adet fiyatı" type="text" placeholder="—" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gold metal kapak, 48 ve üzeri adet fiyatı" type="text" value="16,47" style="width: 84px; box-sizing: border-box; height: 38px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 8px; font: inherit; font-size: 14.5px; color: #17201B"></td>
+<td style="padding: 10px"><input aria-label="Gold metal kapak sitede" type="checkbox" checked="{{ true }}" style="width: 20px; height: 20px; accent-color: #1D6A39"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; height: 38px; padding: 0 4px; border: 0; background: transparent; font: inherit; font-size: 14.5px; font-weight: 600; color: #1D6A39; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>5 seçenek daha göster</button>
+</section>
+
+<section id="takim" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 14px">
+<div>
+<h2 style="margin: 0 0 6px; font-size: 18px; font-weight: 600">Takım parçaları</h2>
+<p style="margin: 0; font-size: 14px; color: #56635B">Takımı oluşturan parçaların stok kodları. Sitede takım tek ürün olarak görünür.</p>
+</div>
+<div><label for="t-secenek" style="display: block; margin-bottom: 6px; font-size: 13.5px; font-weight: 600">Seçenek</label><select id="t-secenek" style="height: 40px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 14.5px; color: #17201B"><option>Gümüş metal kapak</option><option>Beyaz plastik kapak + köpük conta</option><option>Siyah metal kapak</option><option>Gold metal kapak</option></select></div>
+</div>
+<div style="border: 1px solid #E8ECE9; border-radius: 10px; overflow: hidden">
+<div style="display: grid; grid-template-columns: 180px minmax(0, 1fr) 100px 48px; gap: 12px; align-items: center; padding: 10px 14px; background: #F8FAF7; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #56635B"><span>Stok kodu</span><span>Parça</span><span>Adet</span><span></span></div>
+<div style="display: grid; grid-template-columns: 180px minmax(0, 1fr) 100px 48px; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid #E8ECE9; font-size: 14.5px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px">CK022-2</span><span>Kavanoz</span><span>1</span><button type="button" aria-label="Parçayı kaldır" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: transparent; color: #56635B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+<div style="display: grid; grid-template-columns: 180px minmax(0, 1fr) 100px 48px; gap: 12px; align-items: center; padding: 10px 14px; border-top: 1px solid #E8ECE9; font-size: 14.5px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13.5px">MK040-4</span><span>Metal kapak</span><span>1</span><button type="button" aria-label="Parçayı kaldır" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: transparent; color: #56635B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+</div>
+<button type="button" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; height: 38px; padding: 0 12px; border: 1px dashed #9AA59E; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14.5px; font-weight: 600; color: #1D6A39; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Parça ekle</button>
+</section>
+
+<section id="medya" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 6px; font-size: 18px; font-weight: 600">Fotoğraf ve video</h2>
+<p style="margin: 0 0 16px; font-size: 14px; color: #56635B">İlk fotoğraf listelerde ve Google'da görünür. Sırayı sürükleyerek değiştirin.</p>
+<div onDragOver="{{onDragOver}}" onDragLeave="{{onDragLeave}}" onDrop="{{onDrop}}" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 28px 16px; margin-bottom: 16px; border: 2px dashed {{dropCizgi}}; border-radius: 14px; background: {{dropZemin}}; text-align: center">
+<svg class="ic" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true" style="color: #1D6A39"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>
+<p style="margin: 0; font-size: 16px; font-weight: 600">{{dropYazi}}</p>
+<p style="margin: 0; font-size: 13.5px; color: #56635B">JPG, PNG veya WebP · en fazla 10 MB · otomatik küçültülür ve WebP'ye çevrilir</p>
+<label for="m-dosya" style="display: inline-flex; align-items: center; gap: 8px; height: 40px; margin-top: 4px; padding: 0 16px; border: 1.5px solid #1D6A39; border-radius: 10px; background: #FFFFFF; color: #1D6A39; font-size: 14.5px; font-weight: 600; cursor: pointer">Bilgisayardan seç</label>
+<input id="m-dosya" class="sr" type="file" multiple="{{ true }}" accept="image/jpeg,image/png,image/webp" onChange="{{onDosya}}">
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px">
+<div style="position: relative; aspect-ratio: 1 / 1; border: 2px solid #1D6A39; border-radius: 12px; background: #F0F3F0; color: #8A968E; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M8 3h8v3H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1z"></path></svg><span style="position: absolute; left: 8px; bottom: 8px; padding: 2px 8px; border-radius: 999px; background: #1D6A39; color: #FFFFFF; font-size: 11.5px; font-weight: 600">Kapak görseli</span></div>
+<div style="aspect-ratio: 1 / 1; border: 1px solid #DCE3DD; border-radius: 12px; background: #F0F3F0; color: #8A968E; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M8 3h8v3H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1z"></path></svg></div>
+<div style="aspect-ratio: 1 / 1; border: 1px solid #DCE3DD; border-radius: 12px; background: #F0F3F0; color: #8A968E; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M8 3h8v3H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1z"></path></svg></div>
+<div style="aspect-ratio: 1 / 1; border: 1px solid #DCE3DD; border-radius: 12px; background: #F0F3F0; color: #8A968E; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><path d="M8 3h8v3H8z"></path><path d="M7 6h10a1 1 0 0 1 1 1v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7a1 1 0 0 1 1-1z"></path></svg></div>
+<sc-for list="{{yuklenen}}" as="y" hint-placeholder-count="0">
+<div style="position: relative; aspect-ratio: 1 / 1; border: 1px solid #B9D3C1; border-radius: 12px; background: #F4F8F5; color: #1D6A39; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; box-sizing: border-box; text-align: center"><svg class="ic" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12.5px; color: #17201B">{{y.ad}}</span><span style="font-size: 12px; font-weight: 600">Yüklendi · WebP</span></div>
+</sc-for>
+<button type="button" style="aspect-ratio: 1 / 1; border: 1.5px dashed #9AA59E; border-radius: 12px; background: #FFFFFF; color: #1D6A39; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; font: inherit; font-size: 13.5px; font-weight: 600; text-align: center; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></svg>Fotoğraf ekle<span style="font-weight: 400; color: #56635B; font-size: 12.5px">sürükleyin ya da seçin</span></button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<div><label for="m-video" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ürün videosu (YouTube bağlantısı)</label><input id="m-video" type="url" placeholder="https://youtube.com/…" style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"></div>
+<div><span style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Teknik föy (PDF)</span><button type="button" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 14.5px; font-weight: 600; color: #17201B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>Dosya seç</button></div>
+</div>
+</section>
+
+<section id="aciklama" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 14px; font-size: 18px; font-weight: 600">Açıklama</h2>
+<div style="border: 1px solid #C9D2CB; border-radius: 10px; overflow: hidden">
+<div style="display: flex; gap: 2px; padding: 6px; border-bottom: 1px solid #E8ECE9; background: #F8FAF7">
+<button type="button" aria-label="Kalın" style="width: 36px; height: 34px; border: 0; border-radius: 6px; background: transparent; font: inherit; font-size: 15px; font-weight: 700; color: #17201B; cursor: pointer">B</button>
+<button type="button" aria-label="İtalik" style="width: 36px; height: 34px; border: 0; border-radius: 6px; background: transparent; font: inherit; font-size: 15px; font-style: italic; color: #17201B; cursor: pointer">I</button>
+<button type="button" aria-label="Madde işaretli liste" style="width: 36px; height: 34px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 6px; background: #E6F0E9; color: #134C28; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"></path></svg></button>
+<button type="button" aria-label="Bağlantı ekle" style="width: 36px; height: 34px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 6px; background: transparent; color: #17201B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg></button>
+</div>
+<label class="sr" for="u-aciklama">Ürün açıklaması</label>
+<textarea id="u-aciklama" rows="5" style="display: block; width: 100%; box-sizing: border-box; padding: 14px; border: 0; font: inherit; font-size: 15px; line-height: 1.7; color: #17201B; resize: vertical">• Ürün kapaklı gönderilir.
+• Kavanoza uyan yedek kapak ve emniyet bandı, uyumlu ürünler bölümündedir.
+• Yoğunluktan ötürü sevkiyat 3 iş gününü bulabilir.</textarea>
+</div>
+</section>
+
+<section id="uyumlu" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 12px; font-size: 18px; font-weight: 600">Uyumlu ürünler</h2>
+<label style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; margin-bottom: 14px; border-radius: 10px; background: #E6F0E9; font-size: 14.5px; cursor: pointer"><input type="checkbox" role="switch" checked="{{ true }}" style="width: 20px; height: 20px; accent-color: #1D6A39; flex: none"><span><span style="font-weight: 600">Ağız çapına göre otomatik eşleştir</span><span style="color: #3D4A42"> · 63 mm, twist-off kapak, conta ve emniyet bandı</span></span></label>
+<ul style="list-style: none; margin: 0 0 12px; padding: 0; border: 1px solid #E8ECE9; border-radius: 10px">
+<li style="display: flex; align-items: center; gap: 12px; padding: 10px 14px"><span style="flex: 1; min-width: 0; font-size: 14.5px; font-weight: 500">63 mm twist-off gümüş metal kapak</span><span style="font-size: 14px; color: #3D4A42">2,67 – 3,72 ₺</span><span style="padding: 2px 8px; border-radius: 999px; background: #EEF1EE; font-size: 12px; font-weight: 600; color: #3D4A42">Otomatik</span></li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid #E8ECE9"><span style="flex: 1; min-width: 0; font-size: 14.5px; font-weight: 500">63 mm ağız için kendinden yapışkanlı köpük conta</span><span style="font-size: 14px; color: #3D4A42">2,48 – 3,72 ₺</span><span style="padding: 2px 8px; border-radius: 999px; background: #EEF1EE; font-size: 12px; font-weight: 600; color: #3D4A42">Otomatik</span></li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid #E8ECE9"><span style="flex: 1; min-width: 0; font-size: 14.5px; font-weight: 500">Emniyet bandı 57/58/63 mm – yazısız, 100 g</span><span style="font-size: 14px; color: #3D4A42">60,14 – 107,26 ₺</span><span style="padding: 2px 8px; border-radius: 999px; background: #EEF1EE; font-size: 12px; font-weight: 600; color: #3D4A42">Otomatik</span></li>
+<li style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid #E8ECE9"><span style="flex: 1; min-width: 0; font-size: 14.5px; font-weight: 500">Emniyet bandı 57/58/63 mm – yazılı, 100 g</span><span style="font-size: 14px; color: #3D4A42">65,72 – 117,18 ₺</span><span style="padding: 2px 8px; border-radius: 999px; background: #EEF1EE; font-size: 12px; font-weight: 600; color: #3D4A42">Otomatik</span></li>
+</ul>
+<button type="button" style="display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 12px; border: 1px dashed #9AA59E; border-radius: 8px; background: #FFFFFF; font: inherit; font-size: 14.5px; font-weight: 600; color: #1D6A39; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Elle ürün ekle</button>
+</section>
+
+<section id="seo" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 24px">
+<h2 style="margin: 0 0 16px; font-size: 18px; font-weight: 600">SEO</h2>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div><label for="s-url" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ürün adresi</label><div style="display: flex; height: 44px; border: 1px solid #C9D2CB; border-radius: 10px; overflow: hidden"><span style="display: flex; align-items: center; padding: 0 10px; background: #F8FAF7; border-right: 1px solid #E8ECE9; font-size: 14px; color: #56635B; white-space: nowrap">bursasisekavanoz.com/</span><input id="s-url" type="text" value="cam-kavanoz/370-ml-uzun-cam-kavanoz" style="flex: 1; min-width: 0; border: 0; padding: 0 12px; font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #17201B"></div></div>
+<div><div style="display: flex; justify-content: space-between; margin-bottom: 6px"><label for="s-baslik" style="font-size: 14px; font-weight: 600">Sayfa başlığı</label><span style="font-size: 13px; color: #56635B">44 / 60</span></div><input id="s-baslik" type="text" value="370 ml Uzun Cam Kavanoz | Bursa Şişe Kavanoz" style="width: 100%; box-sizing: border-box; height: 44px; padding: 0 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B"></div>
+<div><div style="display: flex; justify-content: space-between; margin-bottom: 6px"><label for="s-aciklama" style="font-size: 14px; font-weight: 600">Arama açıklaması</label><span style="font-size: 13px; color: #56635B">128 / 160</span></div><textarea id="s-aciklama" rows="2" style="width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; line-height: 1.5; color: #17201B; resize: vertical">63 mm twist-off ağızlı 370 ml uzun cam kavanoz. Metal ve plastik kapak seçenekleri, kademeli toptan fiyat ve 3 iş gününde kargo.</textarea></div>
+<div style="padding: 16px; border: 1px solid #E8ECE9; border-radius: 10px; background: #FBFCFB">
+<p style="margin: 0 0 8px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #56635B">Google önizlemesi</p>
+<p style="margin: 0; font-size: 13px; color: #3D4A42">bursasisekavanoz.com › cam-kavanoz</p>
+<p style="margin: 2px 0; font-size: 19px; color: #1A0DAB">370 ml Uzun Cam Kavanoz | Bursa Şişe Kavanoz</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3D4A42">63 mm twist-off ağızlı 370 ml uzun cam kavanoz. Metal ve plastik kapak seçenekleri, kademeli toptan fiyat ve 3 iş gününde kargo.</p>
+</div>
+</div>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px">
+<span style="font-size: 14px; color: {{kayitRenk}}">{{kayitYazi}}</span>
+<div style="display: flex; gap: 10px">
+<button type="button" style="height: 44px; padding: 0 16px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; color: #17201B; cursor: pointer">Vazgeç</button>
+<button type="button" onClick="{{kaydet}}" style="height: 44px; padding: 0 20px; border: 0; border-radius: 10px; background: #1D6A39; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Kaydet</button>
+</div>
+</div>
+</div>
+
+<aside style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 20px">
+<h2 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">Yayın durumu</h2>
+<label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; cursor: pointer"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600; color: {{yayinRenk}}">{{yayinYazi}}</span><span style="font-size: 13px; color: #56635B">{{yayinAciklama}}</span></span><input type="checkbox" role="switch" checked="{{yayinda}}" onChange="{{tYayin}}" style="width: 22px; height: 22px; margin: 0; accent-color: #1D6A39; flex: none"></label>
+<label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding-top: 8px; border-top: 1px solid #F0F3F0; cursor: pointer"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600">"Yeni" etiketi</span><span style="font-size: 13px; color: #56635B">Kartta ve ürün sayfasında görünür</span></span><input type="checkbox" checked="{{yeni}}" onChange="{{tYeni}}" style="width: 20px; height: 20px; margin: 0; accent-color: #1D6A39; flex: none"></label>
+<sc-if value="{{yeni}}" hint-placeholder-val="{{ false }}"><div style="padding: 4px 0 8px"><label for="y-bitis" style="display: block; margin-bottom: 6px; font-size: 13.5px; font-weight: 600">Etiketin kalkacağı tarih</label><input id="y-bitis" type="date" value="{{yeniBitis}}" onChange="{{onYeniBitis}}" style="width: 100%; box-sizing: border-box; height: 42px; padding: 0 10px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 14.5px; color: #17201B"></div></sc-if>
+<div style="margin-top: 10px; padding: 4px 12px; border: 1.5px solid {{tukCizgi}}; border-radius: 12px; background: {{tukZemin}}">
+<label style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; cursor: pointer"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700; color: {{tukYazi}}">Tükendi</span><span style="font-size: 13px; line-height: 1.4; color: #56635B">Kaydedince ürün fotoğrafının üstünde kırmızı "TÜKENDİ" yazısı çıkar</span></span><input type="checkbox" checked="{{tukendi}}" onChange="{{tTukendi}}" style="width: 22px; height: 22px; margin: 0; accent-color: #C62828; flex: none"></label>
+</div>
+<p style="margin: 10px 0 0; font-size: 13px; line-height: 1.5; color: #56635B">Stok adedi tutulmaz. Tükendi işaretli ürün sitede kalır ve listede sona iner; gizlenen ürün silinmez.</p>
+</section>
+
+<section aria-labelledby="onizleme-baslik" style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 20px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px"><h2 id="onizleme-baslik" style="margin: 0; font-size: 16px; font-weight: 600">Sitede görünüm</h2><sc-if value="{{degisiklik}}" hint-placeholder-val="{{ false }}"><span style="padding: 2px 10px; border-radius: 999px; background: #FCEFD9; color: #7A4300; font-size: 12.5px; font-weight: 600">Kaydedilmedi</span></sc-if></div>
+<div style="border: 1px solid #E4DCCD; border-radius: 16px; overflow: hidden; background: #FFFDF9">
+<div style="position: relative; height: 200px; overflow: hidden">
+<svg aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"><rect width="100%" height="100%" fill="#E9E3D7"></rect><rect width="100%" height="100%" filter="url(#p-leke)"></rect><rect width="100%" height="100%" filter="url(#p-kum)"></rect></svg>
+<svg viewBox="0 0 120 160" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 120px; height: 160px; transform: translate(-50%, -50%); opacity: {{onizOp}}"><ellipse cx="60" cy="149" rx="38" ry="6" fill="url(#p-golge)"></ellipse><rect x="34" y="20" width="52" height="20" rx="3" fill="url(#p-gumus)"></rect><path d="M34 25H86M34 30H86M34 35H86" stroke="#000000" stroke-opacity="0.12" stroke-width="0.8"></path><rect x="37" y="40" width="46" height="6" rx="1" fill="url(#p-seffaf)"></rect><path d="M31 52Q31 46 38 46H82Q89 46 89 52V140Q89 148 81 148H39Q31 148 31 140Z" fill="url(#p-seffaf)" stroke="#6E7F80" stroke-opacity="0.4"></path><rect x="38" y="55" width="6" height="84" rx="3" fill="#FFFFFF" fill-opacity="0.6"></rect></svg>
+<sc-if value="{{kYeni}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 10px; left: 10px; padding: 3px 10px; border-radius: 999px; background: #134C28; color: #FFFFFF; font-size: 12px; font-weight: 600">Yeni</span></sc-if>
+<sc-if value="{{kTukendi}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-12deg); padding: 6px 18px; border: 3px solid rgba(198, 40, 40, 0.72); border-radius: 10px; background: rgba(255, 255, 255, 0.16); color: rgba(198, 40, 40, 0.8); font-size: 26px; font-weight: 700; letter-spacing: 0.14em; line-height: 1.1; white-space: nowrap; pointer-events: none">TÜKENDİ</span></sc-if>
+<sc-if value="{{kGizli}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(23, 32, 27, 0.55); color: #FFFFFF; font-size: 15px; font-weight: 600">Gizli – sitede görünmüyor</span></sc-if>
+</div>
+<div style="padding: 12px 14px 14px"><div style="font-size: 15px; font-weight: 600">370 ml uzun cam kavanoz</div><div style="margin-top: 2px; font-size: 13px; color: #56635B">370 ml · Cam · Metal kapak</div><div style="margin-top: 8px; font-size: 16px; font-weight: 700">13,57 – 25,33 ₺</div></div>
+</div>
+<p style="margin: 10px 0 0; font-size: 12.5px; color: #56635B">Önizleme son kaydedilen hâli gösterir.</p>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 20px">
+<div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px">
+<h2 style="margin: 0; font-size: 16px; font-weight: 600">Eksik bilgiler</h2>
+<span style="padding: 2px 10px; border-radius: 999px; background: #FCEFD9; color: #7A4300; font-size: 13px; font-weight: 700">6</span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; font-size: 14.5px">
+<li style="padding: 8px 0; border-top: 1px solid #F0F3F0"><a href="#ozellikler" style="color: #17201B">Ölçüler (çap × yükseklik)</a></li>
+<li style="padding: 8px 0; border-top: 1px solid #F0F3F0"><a href="#ozellikler" style="color: #17201B">Ağırlık</a></li>
+<li style="padding: 8px 0; border-top: 1px solid #F0F3F0"><a href="#ozellikler" style="color: #17201B">Koli içi adet</a></li>
+<li style="padding: 8px 0; border-top: 1px solid #F0F3F0"><a href="#ozellikler" style="color: #17201B">Gıdaya uygunluk</a></li>
+<li style="padding: 8px 0; border-top: 1px solid #F0F3F0"><a href="#secenekler" style="color: #17201B">KDV bilgisi</a></li>
+<li style="padding: 8px 0; border-top: 1px solid #F0F3F0"><a href="#secenekler" style="color: #17201B">2 seçenekte stok kodu</a></li>
+</ul>
+<p style="margin: 10px 0 0; font-size: 13px; color: #56635B">Öneri: ürün videosu ekleyin.</p>
+</section>
+
+<section style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 20px">
+<h2 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">Diğer işlemler</h2>
+<a href="Urun-Detay.dc.html" style="display: flex; align-items: center; gap: 10px; min-height: 42px; color: #17201B; text-decoration: none; font-size: 14.5px"><svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>Ürün sayfasını sitede aç</a>
+<button type="button" style="display: flex; align-items: center; gap: 10px; width: 100%; min-height: 42px; padding: 0; border: 0; background: transparent; font: inherit; font-size: 14.5px; color: #17201B; text-align: left; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Kopyasını oluştur</button>
+<button type="button" style="display: flex; align-items: center; gap: 10px; width: 100%; min-height: 42px; padding: 0; border: 0; background: transparent; font: inherit; font-size: 14.5px; color: #A3261A; text-align: left; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8"></path></svg>Ürünü arşivle</button>
+</section>
+</aside>
+</main>
+</div>
+<sc-if value="{{bildirimVar}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 6; display: flex; align-items: center; gap: 14px; max-width: calc(100% - 32px); padding: 12px 12px 12px 18px; box-sizing: border-box; border-radius: 12px; background: #17201B; color: #FFFFFF; font-size: 14.5px; box-shadow: 0 12px 28px rgba(23, 32, 27, 0.25)"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="color: #A7E3BA"><path d="M20 6L9 17l-5-5"></path></svg><span>{{bildirim}}</span><button type="button" aria-label="Bildirimi kapat" onClick="{{bildirimKapat}}" style="flex: none; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 8px; background: transparent; color: #FFFFFF; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const set = (p) => this.setState(p);
+    const ILK = { sise: 'Cam Damlalıklı Şişeler', kavanoz: 'Cam Kavanozlar - Kapaklı', kapak: 'Metal Kapaklar', sprey: 'Spreyler' };
+    const ana = s.ana || 'kavanoz';
+    const altVar = !!ILK[ana];
+    const yayinda = s.yayinda ?? true;
+    const yeni = !!s.yeni;
+    const tukendi = !!s.tukendi;
+    const kayit = s.kayit || { yayinda: true, yeni: false, tukendi: false };
+    const degisiklik = kayit.yayinda !== yayinda || kayit.yeni !== yeni || kayit.tukendi !== tukendi;
+    const surukle = !!s.surukle;
+    const yuklenen = s.yuklenen || [];
+    const ekle = (files) => {
+      const adlar = Array.prototype.slice.call(files || []).map((f) => f.name).filter(Boolean);
+      const liste = adlar.length ? adlar : ['yeni-fotograf.jpg'];
+      set({ surukle: false, yuklenen: yuklenen.concat(liste.map((ad) => ({ ad: ad }))) });
+    };
+    return {
+      ana: ana, onAna: (e) => set({ ana: e.target.value, alt: ILK[e.target.value] || '' }),
+      anaSise: ana === 'sise', anaKavanoz: ana === 'kavanoz', anaKapak: ana === 'kapak', anaSprey: ana === 'sprey', anaTek: !altVar,
+      alt: s.alt || ILK[ana] || '', onAlt: (e) => set({ alt: e.target.value }),
+      malzeme: s.malzeme || 'cam', onMalzeme: (e) => set({ malzeme: e.target.value }),
+      kapakTipi: s.kapakTipi || 'metal', onKapakTipi: (e) => set({ kapakTipi: e.target.value }),
+      hacim: s.hacim || '370', onHacim: (e) => set({ hacim: e.target.value }),
+      agiz: s.agiz || '63', onAgiz: (e) => set({ agiz: e.target.value }),
+      onDragOver: (e) => { e.preventDefault(); if (!surukle) set({ surukle: true }); },
+      onDragLeave: () => set({ surukle: false }),
+      onDrop: (e) => { e.preventDefault(); ekle(e.dataTransfer && e.dataTransfer.files); },
+      onDosya: (e) => ekle(e.target.files),
+      dropCizgi: surukle ? '#1D6A39' : '#9AA59E',
+      dropZemin: surukle ? '#E6F0E9' : '#FBFCFA',
+      dropYazi: surukle ? 'Bırakın, yüklensin' : 'Fotoğrafları buraya sürükleyip bırakın',
+      yuklenen: yuklenen,
+      yayinda: yayinda, tYayin: () => set({ yayinda: !yayinda }),
+      yayinYazi: yayinda ? 'Sitede yayında' : 'Gizli',
+      yayinAciklama: yayinda ? 'Müşteriler ürünü görüyor' : 'Sitede görünmez, silinmez',
+      yayinRenk: yayinda ? '#134C28' : '#56635B',
+      pillMetin: !kayit.yayinda ? 'Gizli' : (kayit.tukendi ? 'Yayında · Tükendi' : 'Yayında'),
+      pillZemin: !kayit.yayinda ? '#EEF1EE' : (kayit.tukendi ? '#FDF0EF' : '#E6F0E9'),
+      pillYazi: !kayit.yayinda ? '#3D4A42' : (kayit.tukendi ? '#A3261A' : '#134C28'),
+      pillNokta: !kayit.yayinda ? '#8A968E' : (kayit.tukendi ? '#C62828' : '#1D6A39'),
+      yeni: yeni, tYeni: () => set({ yeni: !yeni }),
+      yeniBitis: s.yeniBitis || '2026-11-12', onYeniBitis: (e) => set({ yeniBitis: e.target.value }),
+      tukendi: tukendi, tTukendi: () => set({ tukendi: !tukendi }),
+      tukCizgi: tukendi ? '#C62828' : '#DCE3DD', tukZemin: tukendi ? '#FDF0EF' : '#FFFFFF', tukYazi: tukendi ? '#A3261A' : '#17201B',
+      degisiklik: degisiklik,
+      kYeni: kayit.yeni, kTukendi: kayit.tukendi, kGizli: !kayit.yayinda, onizOp: kayit.tukendi ? 0.8 : 1,
+      kayitYazi: degisiklik ? 'Kaydedilmemiş değişiklik var.' : 'Tüm değişiklikler kaydedildi.',
+      kayitRenk: degisiklik ? '#7A4300' : '#56635B',
+      kaydet: () => set({ kayit: { yayinda: yayinda, yeni: yeni, tukendi: tukendi }, bildirim: tukendi ? 'Kaydedildi. Ürün sitede fotoğrafının üstünde kırmızı “TÜKENDİ” yazısıyla görünüyor.' : (yayinda ? 'Kaydedildi. Ürün sitede güncel hâliyle görünüyor.' : 'Kaydedildi. Ürün sitede gizli.') }),
+      bildirimVar: !!s.bildirim, bildirim: s.bildirim || '', bildirimKapat: () => set({ bildirim: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>

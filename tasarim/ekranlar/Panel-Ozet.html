@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yönetim paneli – genel bakış</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D6A39}a:hover{color:#134C28}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+input::placeholder{color:#6B776F}
+:focus-visible{outline:2px solid #1D6A39;outline-offset:2px}
+</style>
+</helmet>
+<div style="position: relative; min-height: 1000px; display: flex; flex-wrap: wrap; background: #F4F6F3; font-family: 'IBM Plex Sans', sans-serif; color: #17201B">
+
+<aside style="flex: 1 1 220px; box-sizing: border-box; padding: 20px 12px; background: #134C28; color: #FFFFFF; display: flex; flex-direction: column; gap: 4px">
+<a href="Panel-Ozet.dc.html" style="display: flex; align-items: center; gap: 10px; padding: 0 8px 18px; color: #FFFFFF; text-decoration: none">
+<img src="/_blob/3d63a14d53f9b8a802afd90628bcd3b6" alt="" width="38" height="38" style="width: 38px; height: 38px; display: block; border-radius: 19px; background: #FFFFFF">
+<span style="display: flex; flex-direction: column; line-height: 1.25"><span style="font-size: 15px; font-weight: 700">Bursa Şişe Kavanoz</span><span style="font-size: 12.5px; color: #B9D3C1">Yönetim paneli</span></span>
+</a>
+<nav aria-label="Yönetim menüsü" style="display: flex; flex-direction: column; gap: 2px">
+<a href="Panel-Ozet.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.14); color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>Genel bakış</a>
+<a href="Panel-Urun.dc.html" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"></path><path d="M3.3 7L12 12l8.7-5M12 22V12"></path></svg>Ürünler</a>
+<a href="Panel-Kategori.dc.html" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Kategoriler</a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg><span style="flex: 1">Teklif talepleri</span><span style="min-width: 22px; height: 22px; padding: 0 7px; box-sizing: border-box; border-radius: 11px; background: #D9A441; color: #17201B; font-size: 12px; font-weight: 700; line-height: 22px; text-align: center">3</span></a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>Tanımlı listeler</a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M4 9h16M9 9v11"></path></svg>Sayfalar</a>
+<a href="#" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 15px"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"></path></svg>Ayarlar</a>
+</nav>
+<span style="flex: 1 0 24px"></span>
+<a href="Kategori-Liste.dc.html" style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 12px; border-radius: 8px; color: #E3EEE6; text-decoration: none; font-size: 14.5px"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>Siteyi görüntüle</a>
+<div style="display: flex; align-items: center; gap: 10px; padding: 12px; margin-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.16)">
+<span style="width: 34px; height: 34px; border-radius: 17px; background: #E6F0E9; color: #134C28; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">Y</span>
+<span style="display: flex; flex-direction: column; line-height: 1.25"><span style="font-size: 14px; font-weight: 600">Yönetici</span><a href="Panel-Giris.dc.html" style="font-size: 12.5px; color: #B9D3C1">Çıkış yap</a></span>
+</div>
+</aside>
+
+<div style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column">
+<header style="height: 64px; padding: 0 32px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #FFFFFF; border-bottom: 1px solid #DCE3DD">
+<form role="search" style="flex: 0 1 460px; min-width: 0">
+<label class="sr" for="oz-ara">Panelde ara</label>
+<div style="display: flex; align-items: center; gap: 10px; height: 42px; padding: 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; background: #FFFFFF">
+<svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="color: #56635B"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+<input id="oz-ara" type="search" placeholder="Ürün adı veya stok kodu" style="flex: 1; min-width: 0; border: 0; padding: 0; font: inherit; font-size: 15px; color: #17201B; outline: none">
+</div>
+</form>
+<a href="Panel-Urun.dc.html" style="display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 18px; border-radius: 10px; background: #1D6A39; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Yeni ürün</a>
+</header>
+
+<main style="padding: 28px 32px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div>
+<h1 style="margin: 0 0 4px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">Hoş geldiniz</h1>
+<p style="margin: 0; font-size: 14.5px; color: #56635B">Son giriş: 12 Ekim 2026, 23:14 · bu cihazdan. Siz değilseniz <a href="#">şifrenizi değiştirin</a>.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #134C28; border-radius: 14px; color: #FFFFFF; text-decoration: none">
+<span style="font-size: 14px; color: #D7E6DB">Yayındaki ürün</span>
+<span style="font-size: 36px; line-height: 1.1; font-weight: 700; letter-spacing: -0.01em">{{yayinda}}</span>
+<span style="font-size: 13.5px; color: #B9D3C1">Bu hafta 12 yeni ürün eklendi</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; color: #17201B; text-decoration: none">
+<span style="font-size: 14px; color: #56635B">Gizli ürün</span>
+<span style="font-size: 30px; line-height: 1.1; font-weight: 700">{{gizli}}</span>
+<span style="font-size: 13.5px; color: #56635B">Sitede görünmüyor, silinmedi</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; color: #17201B; text-decoration: none">
+<span style="font-size: 14px; color: #56635B">Tükendi işaretli</span>
+<span style="font-size: 30px; line-height: 1.1; font-weight: 700">312</span>
+<span style="font-size: 13.5px; color: #56635B">Fotoğrafında kırmızı TÜKENDİ yazar</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #E8D3A6; border-radius: 14px; color: #17201B; text-decoration: none">
+<span style="font-size: 14px; color: #7A4300">Eksik bilgili</span>
+<span style="font-size: 30px; line-height: 1.1; font-weight: 700">146</span>
+<span style="font-size: 13.5px; color: #56635B">Ölçü, koli adedi veya fotoğraf yok</span>
+</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<section aria-labelledby="son-baslik" style="flex: 999 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; overflow: hidden">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px 0">
+<h2 id="son-baslik" style="margin: 0; font-size: 17px; font-weight: 600">Son işlemler</h2>
+<a href="Panel-Urun.dc.html" style="font-size: 14px; font-weight: 600">Tüm ürünler</a>
+</div>
+<div role="tablist" aria-label="Son işlemler" style="display: flex; gap: 4px; padding: 0 20px; margin-top: 8px; border-bottom: 1px solid #DCE3DD">
+<button type="button" role="tab" aria-selected="{{selDuz}}" onClick="{{tDuz}}" style="height: 46px; padding: 0 12px; border: 0; border-bottom: 3px solid {{cizgiDuz}}; background: transparent; font: inherit; font-size: 15px; font-weight: 600; color: {{yaziDuz}}; cursor: pointer">Son düzenlenenler</button>
+<button type="button" role="tab" aria-selected="{{selEk}}" onClick="{{tEk}}" style="height: 46px; padding: 0 12px; border: 0; border-bottom: 3px solid {{cizgiEk}}; background: transparent; font: inherit; font-size: 15px; font-weight: 600; color: {{yaziEk}}; cursor: pointer">Son eklenenler</button>
+</div>
+<div role="tabpanel">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 170px 110px 96px 84px; align-items: center; gap: 12px; padding: 10px 20px; background: #F8FAF7; font-size: 12.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #56635B">
+<span>Ürün</span><span>İşlem</span><span>Zaman</span><span>Yayında</span><span></span>
+</div>
+<sc-for list="{{satirlar}}" as="r" hint-placeholder-count="6">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 170px 110px 96px 84px; align-items: center; gap: 12px; padding: 12px 20px; border-top: 1px solid #E8ECE9">
+<div style="min-width: 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px">
+<a href="Panel-Urun.dc.html" style="color: #17201B; text-decoration: none; font-size: 15px; font-weight: 600; line-height: 1.35">{{r.ad}}</a>
+<sc-if value="{{r.yeni}}" hint-placeholder-val="{{ false }}"><span style="padding: 1px 8px; border-radius: 999px; background: #134C28; color: #FFFFFF; font-size: 11.5px; font-weight: 600">Yeni</span></sc-if>
+<sc-if value="{{r.tukendi}}" hint-placeholder-val="{{ false }}"><span style="padding: 1px 8px; border-radius: 999px; background: #EEF1EE; color: #3D4A42; font-size: 11.5px; font-weight: 600">Tükendi</span></sc-if>
+</div>
+<div style="margin-top: 2px; font-size: 13px; color: #56635B">{{r.kategori}}</div>
+</div>
+<span style="font-size: 14px; color: #3D4A42">{{r.islem}}</span>
+<span style="font-size: 14px; color: #56635B">{{r.zaman}}</span>
+<label style="display: inline-flex; align-items: center; gap: 8px; min-height: 40px; font-size: 13.5px; font-weight: 600; color: {{r.durumRenk}}; cursor: pointer">
+<input type="checkbox" role="switch" checked="{{r.yayinda}}" onChange="{{r.degistir}}" aria-label="{{r.etiket}}" style="width: 20px; height: 20px; margin: 0; accent-color: #1D6A39; flex: none">{{r.durum}}
+</label>
+<a href="Panel-Urun.dc.html" style="justify-self: end; display: inline-flex; align-items: center; height: 36px; padding: 0 12px; border: 1px solid #C9D2CB; border-radius: 8px; box-sizing: border-box; color: #17201B; text-decoration: none; font-size: 13.5px; font-weight: 600">Düzenle</a>
+</div>
+</sc-for>
+</div>
+</section>
+
+<aside style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 18px 20px">
+<h2 style="margin: 0 0 8px; font-size: 16px; font-weight: 600">Dikkat isteyenler</h2>
+<ul style="list-style: none; margin: 0; padding: 0; font-size: 14.5px">
+<li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid #F0F3F0"><span style="width: 8px; height: 8px; border-radius: 4px; background: #D9A441; flex: none"></span><a href="#" style="flex: 1; color: #17201B">3 yeni teklif talebi</a><span style="font-size: 13px; color: #56635B">bugün</span></li>
+<li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid #F0F3F0"><span style="width: 8px; height: 8px; border-radius: 4px; background: #9AA59E; flex: none"></span><a href="#" style="flex: 1; color: #17201B">146 üründe eksik bilgi</a></li>
+<li style="display: flex; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid #F0F3F0"><span style="width: 8px; height: 8px; border-radius: 4px; background: #9AA59E; flex: none"></span><a href="#" style="flex: 1; color: #17201B">8 ürünün "Yeni" etiketi bu hafta kalkıyor</a></li>
+</ul>
+</section>
+<section style="background: #FFFFFF; border: 1px solid #DCE3DD; border-radius: 14px; padding: 18px 20px">
+<h2 style="margin: 0 0 10px; font-size: 16px; font-weight: 600">Hızlı işlemler</h2>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<a href="Panel-Urun.dc.html" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; color: #17201B; text-decoration: none; font-size: 14.5px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Yeni ürün ekle</a>
+<a href="Panel-Kategori.dc.html" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; color: #17201B; text-decoration: none; font-size: 14.5px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Kategoriye ürün ekle</a>
+<a href="Kategori-Liste.dc.html" style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 14px; border: 1px solid #C9D2CB; border-radius: 10px; color: #17201B; text-decoration: none; font-size: 14.5px; font-weight: 600"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path></svg>Siteyi görüntüle</a>
+</div>
+</section>
+</aside>
+</div>
+</main>
+</div>
+
+<sc-if value="{{bildirimVar}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 4; display: flex; align-items: center; gap: 16px; max-width: calc(100% - 32px); padding: 12px 12px 12px 18px; box-sizing: border-box; border-radius: 12px; background: #17201B; color: #FFFFFF; font-size: 14.5px; box-shadow: 0 12px 28px rgba(23, 32, 27, 0.25)">
+<span>{{bildirim}}</span>
+<button type="button" onClick="{{geriAl}}" style="flex: none; height: 34px; padding: 0 12px; border: 0; border-radius: 8px; background: rgba(255, 255, 255, 0.12); color: #A7E3BA; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Geri al</button>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  veri() {
+    return [
+      { id: 'u370', ad: '370 ml uzun cam kavanoz', kategori: 'Kavanoz › Cam kavanozlar – kapaklı', islem: 'Fiyatlar güncellendi', zaman: '12 dk önce', eklenme: '2 Eyl', yayinda: true, yeni: false, tukendi: false, d: 1, e: 5 },
+      { id: 'u30', ad: '30 ml buzlu cam krem kavanozu + iç tıpa', kategori: 'Kavanoz › Krem kavanozları', islem: 'Kapak rengi eklendi', zaman: 'Dün 17:20', eklenme: '21 Tem', yayinda: true, yeni: false, tukendi: false, d: 2, e: 6 },
+      { id: 'u720', ad: '720 ml uzun tip cam kavanoz', kategori: 'Kavanoz › Cam kavanozlar – kapaklı', islem: 'Gizlendi', zaman: 'Dün 11:05', eklenme: '18 Haz', yayinda: false, yeni: false, tukendi: false, d: 3, e: 7 },
+      { id: 'u15', ad: '15 ml cam kavanoz – metal kapaklı', kategori: 'Kavanoz › Cam kavanozlar – kapaklı', islem: 'Eklendi', zaman: '8 Eki 14:05', eklenme: '8 Eki', yayinda: true, yeni: true, tukendi: false, d: 4, e: 1 },
+      { id: 'u3', ad: '3 ml amber cam damlalıklı şişe', kategori: 'Şişe › Damlalıklı şişeler', islem: 'Tükendi işaretlendi', zaman: '7 Eki 16:48', eklenme: '12 Mar', yayinda: true, yeni: false, tukendi: true, d: 5, e: 9 },
+      { id: 'u500', ad: '500 ml beyaz polietilen kalın şişe – triger spreyli', kategori: 'Şişe › Spreyli şişeler', islem: 'Açıklama düzenlendi', zaman: '6 Eki 10:02', eklenme: '4 May', yayinda: true, yeni: false, tukendi: true, d: 6, e: 8 },
+      { id: 'u50', ad: '50 ml airless pompalı şişe', kategori: 'Şişe › Pompalı şişeler', islem: 'Eklendi', zaman: '5 Eki 09:30', eklenme: '5 Eki', yayinda: true, yeni: true, tukendi: false, d: 7, e: 2 },
+      { id: 'u425', ad: '425 ml uzun Barilla cam kavanoz', kategori: 'Kavanoz › Cam kavanozlar – kapaklı', islem: 'Eklendi', zaman: '3 Eki 15:12', eklenme: '3 Eki', yayinda: true, yeni: true, tukendi: false, d: 8, e: 3 },
+      { id: 'u105', ad: '105 ml uzun silindir cam kavanoz', kategori: 'Kavanoz › Cam kavanozlar – kapaklı', islem: 'Eklendi', zaman: '1 Eki 11:40', eklenme: '1 Eki', yayinda: true, yeni: false, tukendi: false, d: 9, e: 4 }
+    ];
+  }
+  renderVals() {
+    const s = this.state || {};
+    const set = (p) => this.setState(p);
+    const sekme = s.sekme || 'duz';
+    const acik = s.acik || {};
+    const tum = this.veri().map((r) => Object.assign({}, r, { yayinda: acik[r.id] !== undefined ? acik[r.id] : r.yayinda }));
+    const liste = tum.slice().sort((a, b) => (sekme === 'duz' ? a.d - b.d : a.e - b.e)).slice(0, 6);
+    const yayinSay = 12649 + tum.filter((r) => r.yayinda).length - this.veri().filter((r) => r.yayinda).length;
+    const gizliSay = 37 + tum.filter((r) => !r.yayinda).length - this.veri().filter((r) => !r.yayinda).length;
+    const satirlar = liste.map((r) => ({
+      ad: r.ad, kategori: r.kategori, yeni: r.yeni, tukendi: r.tukendi,
+      islem: sekme === 'duz' ? r.islem : 'Eklendi',
+      zaman: sekme === 'duz' ? r.zaman : r.eklenme,
+      yayinda: r.yayinda, durum: r.yayinda ? 'Yayında' : 'Gizli',
+      durumRenk: r.yayinda ? '#134C28' : '#56635B',
+      etiket: r.ad + ' sitede yayında',
+      degistir: () => {
+        const yeni = Object.assign({}, acik, { [r.id]: !r.yayinda });
+        set({ acik: yeni, geri: { id: r.id, deger: r.yayinda }, bildirim: '“' + r.ad + '” ' + (r.yayinda ? 'sitede gizlendi. Ürün silinmedi.' : 'yeniden yayında.') });
+      }
+    }));
+    return {
+      yayinda: yayinSay.toLocaleString('tr-TR'),
+      gizli: gizliSay.toLocaleString('tr-TR'),
+      satirlar: satirlar,
+      selDuz: sekme === 'duz', selEk: sekme === 'ek',
+      cizgiDuz: sekme === 'duz' ? '#1D6A39' : 'transparent', cizgiEk: sekme === 'ek' ? '#1D6A39' : 'transparent',
+      yaziDuz: sekme === 'duz' ? '#17201B' : '#56635B', yaziEk: sekme === 'ek' ? '#17201B' : '#56635B',
+      tDuz: () => set({ sekme: 'duz' }), tEk: () => set({ sekme: 'ek' }),
+      bildirimVar: !!s.bildirim, bildirim: s.bildirim || '',
+      geriAl: () => {
+        const g = s.geri;
+        if (!g) return set({ bildirim: '' });
+        set({ acik: Object.assign({}, acik, { [g.id]: g.deger }), geri: null, bildirim: '' });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

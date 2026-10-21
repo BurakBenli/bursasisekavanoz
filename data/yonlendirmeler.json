@@ -1,0 +1,461 @@
+{
+  "_aciklama": "docs/YONLENDIRMELER.md ile aynı liste; seed bu dosyayı Redirect tablosuna yükler. match=prefix: bu önekle başlayan tüm adresler.",
+  "yonlendirmeler": [
+    {
+      "from": "/product-list?categoryId=1",
+      "to": "/sise",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=2",
+      "to": "/sise/cam-damlalikli-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=3",
+      "to": "/sise/plastik-damlalikli-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=4",
+      "to": "/sise/icten-damlalikli-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=5",
+      "to": "/sise/cam-siseler-kapakli",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=6",
+      "to": "/sise/spreyli-cam-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=7",
+      "to": "/sise/spreyli-plastik-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=8",
+      "to": "/sise/esans-parfum-siseleri",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=9",
+      "to": "/sise/akiticili-cam-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=10",
+      "to": "/sise/akiticili-plastik-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=11",
+      "to": "/sise/mantar-tipali-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=12",
+      "to": "/sise/pompali-siseler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=13",
+      "to": "/sise/kolonya-siseleri",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=14",
+      "to": "/sise/plastik-siseler-kapakli",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=15",
+      "to": "/sise/cam-siseler-kapaksiz",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=16",
+      "to": "/sise/plastik-siseler-kapaksiz",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=17",
+      "to": "/kavanoz",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=18",
+      "to": "/kavanoz/cam-kavanozlar-kapakli",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=19",
+      "to": "/kavanoz/plastik-kavanozlar-kapakli",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=20",
+      "to": "/kavanoz/cam-kavanozlar-kapaksiz",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=21",
+      "to": "/kavanoz/plastik-kavanozlar-kapaksiz",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=22",
+      "to": "/kavanoz/baharat-kavanozlari",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=23",
+      "to": "/kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=24",
+      "to": "/kapak/metal-kapaklar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=25",
+      "to": "/kapak/plastik-kapaklar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=26",
+      "to": "/kapak/plastik-tipalar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=27",
+      "to": "/kapak/mantar-tipalar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=28",
+      "to": "/kapak/flakon-kapaklar-butil-tipalar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=29",
+      "to": "/kapak/cubuklar-cam-ve-plastik-pipetler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=30",
+      "to": "/kapak/cam-damlaliklar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=31",
+      "to": "/sprey-pompa",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=32",
+      "to": "/sprey-pompa/spreyler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=33",
+      "to": "/sprey-pompa/pompalar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=34",
+      "to": "/kapson-emniyet-bandi",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=35",
+      "to": "/kozmetik-ambalaj",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=36",
+      "to": "/laboratuvar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=37",
+      "to": "/hacamat",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=38",
+      "to": "/teshir",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=39",
+      "to": "/bidon",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=40",
+      "to": "/muhtelif",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=41",
+      "to": "/kova",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=42",
+      "to": "/teneke",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=43",
+      "to": "/enjektor",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=44",
+      "to": "/kapak/contalar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list?categoryId=45",
+      "to": "/kapak/ahsap-kapaklar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/product-list",
+      "to": "/urunler",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/5-cc-cam-amber-krem-kavanozu-kapakli-ic-contali-5-ml-kahverengi-krem-kavanozu-amber-mum-kavanozu-ud-576",
+      "to": "/urun/5-ml-amber-cam-krem-kavanozu?secenek=siyah-kapak-kopuk-ic-conta",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/105-cc-uzun-cam-kavanoz-gold-metal-kapakli-105-ml-uzun-kavanoz-sisecam-kodu-140111-ud-3362",
+      "to": "/urun/105-ml-uzun-cam-kavanoz-38-mm?secenek=gold-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/105-cc-uzun-cam-kavanoz-beyaz-metal-kapakli-105-ml-uzun-kavanoz-sisecam-urun-kodu-140111-ud-3361",
+      "to": "/urun/105-ml-uzun-cam-kavanoz-38-mm?secenek=beyaz-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/105-cc-uzun-cam-kavanoz-siyah-metal-kapakli-105-ml-uzun-kavanoz-sisecam-kodu-140111-ud-3363",
+      "to": "/urun/105-ml-uzun-cam-kavanoz-38-mm?secenek=siyah-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/1000-cc-cam-kare-kavanoz-gold-metal-kapakli-1-litre-koseli-cam-kavanoz-ud-5236",
+      "to": "/urun/1000-ml-kare-cam-kavanoz-82-mm?secenek=gold-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/1000-cc-cam-kare-kavanoz-siyah-metal-kapakli-1-litre-koseli-cam-kavanoz-ud-5237",
+      "to": "/urun/1000-ml-kare-cam-kavanoz-82-mm?secenek=siyah-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/1000-cc-cam-kare-kavanoz-kirmizi-metal-kapakli-1-litre-koseli-cam-kavanoz-ud-5240",
+      "to": "/urun/1000-ml-kare-cam-kavanoz-82-mm?secenek=kirmizi-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/1000-cc-cam-kare-kavanoz-acik-yesil-metal-kapakli-1-litre-koseli-cam-kavanoz-ud-11359",
+      "to": "/urun/1000-ml-kare-cam-kavanoz-82-mm?secenek=acik-yesil-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/1000-cc-cam-kare-kavanoz-puantiyeli-metal-kapakli-1-litre-koseli-cam-kavanoz-ud-5243",
+      "to": "/urun/1000-ml-kare-cam-kavanoz-82-mm?secenek=puantiyeli-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/3-cc-amber-cam-damlalikli-sise-siyah-emzik-gold-metalik-kapak-3-ml-kahverengi-cam-damlalikli-sise-ud-3138",
+      "to": "/urun/3-ml-amber-cam-damlalikli-sise?secenek=siyah-emzik-gold-metalik-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/3-cc-amber-cam-damlalikli-sise-siyah-emzik-gumus-metalik-kapak-3-ml-kahverengi-cam-damlalikli-sise-ud-5516",
+      "to": "/urun/3-ml-amber-cam-damlalikli-sise?secenek=siyah-emzik-gumus-metalik-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/3-cc-amber-cam-damlalikli-sise-siyah-emzik-siyah-metal-kapak-3-ml-kahverengi-cam-damlalikli-sise-ud-5515",
+      "to": "/urun/3-ml-amber-cam-damlalikli-sise?secenek=siyah-emzik-siyah-metal-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/3-cc-amber-cam-damlalikli-sise-siyah-emzik-beyaz-plastik-kapak-3-ml-kahverengi-cam-damlalikli-sise-ud-5514",
+      "to": "/urun/3-ml-amber-cam-damlalikli-sise?secenek=siyah-emzik-beyaz-plastik-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/3-cc-amber-cam-damlalikli-sise-siyah-emzik-siyah-plastik-kapak-3-ml-kahverengi-cam-damlalikli-sise-ud-3137",
+      "to": "/urun/3-ml-amber-cam-damlalikli-sise?secenek=siyah-emzik-siyah-plastik-kapak",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/100-ml-dolumu-kolay-genis-agizli-cam-damlalikli-sise-25-mm-agiz-100-cc-beyaz-damlalikli-cam-ecza-sisesi-amber-kahverengi-ud-10452",
+      "to": "/urun/100-ml-genis-agizli-amber-cam-damlalikli-sise?secenek=beyaz-damlalik",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/about",
+      "to": "/hakkimizda",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/contact",
+      "to": "/iletisim",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Reference",
+      "to": "/referanslar",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/privacy-policy",
+      "to": "/gizlilik-politikasi",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/bank-account",
+      "to": "/banka-hesap-bilgileri",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/distance-selling-contract",
+      "to": "/",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/cancel-return-exchange-policy",
+      "to": "/siparis-ve-teslimat",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/About/membership-contract",
+      "to": "/kullanim-kosullari",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Cart",
+      "to": "/teklif-iste",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Account",
+      "to": "/teklif-iste",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Order/List",
+      "to": "/teklif-iste",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Auth/Register",
+      "to": "/",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Auth/RegisterCorporate",
+      "to": "/",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Auth/ForgotPassword",
+      "to": "/",
+      "match": "exact",
+      "status": 301
+    },
+    {
+      "from": "/Auth/",
+      "to": "/",
+      "match": "prefix",
+      "status": 301
+    }
+  ]
+}

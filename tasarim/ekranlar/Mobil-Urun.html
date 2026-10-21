@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Ürün detay – mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D6A39}a:hover{color:#134C28}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+textarea::placeholder{color:#6B776F}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+input[type=number]{-moz-appearance:textfield}
+:focus-visible{outline:2px solid #1D6A39;outline-offset:2px}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #F4F6F3; font-family: 'IBM Plex Sans', sans-serif; color: #17201B">
+
+<div style="flex: none; height: 60px; padding: 0 6px; display: flex; align-items: center; gap: 4px; background: #FFFFFF; border-bottom: 1px solid #DCE3DD">
+<a href="Mobil-Menu.dc.html" aria-label="Menüyü aç" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #17201B"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></a>
+<a href="#" style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; color: #17201B; text-decoration: none"><img src="/_blob/3d63a14d53f9b8a802afd90628bcd3b6" alt="Bursa Şişe Kavanoz logosu" width="34" height="34" style="width: 34px; height: 34px; display: block"><span style="font-size: 15px; font-weight: 700; white-space: nowrap">Bursa Şişe Kavanoz</span></a>
+<button type="button" aria-label="Ara" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 10px; background: transparent; color: #17201B; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></button>
+<a href="Teklif-Mobil.dc.html" aria-label="Teklif iste" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #17201B"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg></a>
+</div>
+
+<div style="flex: 1; min-height: 0; overflow-y: auto">
+<a href="#" style="display: flex; align-items: center; gap: 4px; height: 44px; padding: 0 12px; font-size: 14.5px; font-weight: 500; text-decoration: none; background: #FFFFFF"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg>Balonlu naylon</a>
+
+<div style="position: relative; width: 100%; aspect-ratio: 4 / 5; background: #CDCDCB">
+<img src="/_blob/6a91e3155197ce21b43d0e5a2a8a01c3" alt="Küçük balonlu patpat naylon rulosu, 100 cm en" style="width: 100%; height: 100%; object-fit: cover; display: block">
+<sc-if value="{{tukendi}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-12deg); padding: 6px 20px; border: 3px solid rgba(198, 40, 40, 0.72); border-radius: 12px; background: rgba(255, 255, 255, 0.16); color: rgba(198, 40, 40, 0.8); font-size: 40px; font-weight: 700; letter-spacing: 0.14em; line-height: 1.1; white-space: nowrap; pointer-events: none">TÜKENDİ</span></sc-if>
+<button type="button" onClick="{{toggleFav}}" aria-pressed="{{fav}}" aria-label="{{favLabel}}" style="position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 0; border-radius: 22px; background: #FFFFFF; color: {{favColor}}; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" style="fill: {{favFill}}"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.6 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+<button type="button" style="position: absolute; left: 12px; bottom: 14px; display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border: 0; border-radius: 999px; background: rgba(23, 32, 27, 0.78); color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M7 4l13 8-13 8V4z"></path></svg>Video</button>
+<div aria-label="Fotoğraf 1 / 5" style="position: absolute; right: 12px; bottom: 22px; display: flex; gap: 6px">
+<span style="width: 18px; height: 6px; border-radius: 3px; background: #FFFFFF"></span>
+<span style="width: 6px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.55)"></span>
+<span style="width: 6px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.55)"></span>
+<span style="width: 6px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.55)"></span>
+<span style="width: 6px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.55)"></span>
+</div>
+</div>
+
+<div style="padding: 14px 16px 16px; background: #FFFFFF">
+<button type="button" onClick="{{goReviews}}" style="display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; background: transparent; font: inherit; font-size: 13.5px; color: #56635B; cursor: pointer">
+<span style="display: inline-flex; gap: 2px; color: #B8C2BB"><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" style="fill: #DCE3DD"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"></path></svg><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" style="fill: #DCE3DD"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"></path></svg><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" style="fill: #DCE3DD"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"></path></svg><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" style="fill: #DCE3DD"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"></path></svg><svg class="ic" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" style="fill: #DCE3DD"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2-6.2 3.2L7 14.2 2 9.3l6.9-1z"></path></svg></span>(0) Değerlendirme</button>
+<h1 style="margin: 8px 0 14px; font-size: 22px; line-height: 1.25; font-weight: 700">Küçük Balonlu Patpat Naylon – 1. Kalite – 100 cm × 50 m</h1>
+
+<dl style="margin: 0; padding: 12px 0; border-top: 1px solid #DCE3DD; border-bottom: 1px solid #DCE3DD; display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 8px 10px; font-size: 14px; align-items: center">
+<dt style="font-weight: 600">Stok kodu</dt>
+<dd style="margin: 0; font-family: 'IBM Plex Mono', monospace; color: #3D4A42">MUH019U</dd>
+<dt style="font-weight: 600">Barkod</dt>
+<dd style="margin: 0; font-family: 'IBM Plex Mono', monospace; color: #56635B">[BARKOD NO]</dd>
+</dl>
+
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 12px 0 4px">
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 15.5px; font-weight: 500; color: #134C28"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" style="color: #1D6A39"><path d="M1 4h14v12H1z"></path><path d="M15 8h4l3 3v5h-7V8z"></path><circle cx="5.5" cy="18.5" r="2"></circle><circle cx="18.5" cy="18.5" r="2"></circle></svg>3 iş gününde kargoda</span>
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 15.5px; font-weight: 500; color: #134C28"><svg class="ic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="color: #1D6A39"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg>Mağazadan gel-al</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; padding: 8px 0 14px; border-bottom: 1px solid #DCE3DD; margin-bottom: 14px">
+<button type="button" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-height: 60px; padding: 4px 0; border: 0; background: transparent; font: inherit; font-size: 12.5px; color: #3D4A42; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="21" height="21" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M20 8v6M23 11h-6"></path></svg>Tavsiye et</button>
+<button type="button" onClick="{{goReviews}}" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-height: 60px; padding: 4px 0; border: 0; background: transparent; font: inherit; font-size: 12.5px; color: #3D4A42; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="21" height="21" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"></path><path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"></path></svg>Yorum yaz</button>
+</div>
+
+<div style="display: flex; align-items: baseline; gap: 6px; margin-bottom: 2px"><span style="font-size: 28px; font-weight: 700">{{unitText}}</span><span style="font-size: 14px; color: #56635B">/ adet</span></div>
+<p style="margin: 0 0 10px; font-size: 12.5px; color: #56635B">[KDV dahil / hariç bilgisi]</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px">
+<button type="button" onClick="{{pickT1}}" aria-pressed="{{notT2}}" style="text-align: left; padding: 9px 12px; border: 1.5px solid {{t1Border}}; border-radius: 10px; background: {{t1Bg}}; font: inherit; color: #17201B; cursor: pointer"><span style="display: block; font-size: 12.5px; color: #56635B">1–4 adet</span><span style="display: block; font-size: 16px; font-weight: 600">438,84 ₺</span></button>
+<button type="button" onClick="{{pickT2}}" aria-pressed="{{isT2}}" style="text-align: left; padding: 9px 12px; border: 1.5px solid {{t2Border}}; border-radius: 10px; background: {{t2Bg}}; font: inherit; color: #17201B; cursor: pointer"><span style="display: block; font-size: 12.5px; color: #56635B">5–9 adet · <span style="color: #1D6A39; font-weight: 600">%3 ucuz</span></span><span style="display: block; font-size: 16px; font-weight: 600">424,00 ₺</span></button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px">
+<label for="madet" style="font-size: 14px; font-weight: 600">Adet</label>
+<div style="display: flex; align-items: center; height: 46px; border: 1px solid #C9D2CB; border-radius: 10px; overflow: hidden">
+<button type="button" aria-label="Azalt" onClick="{{dec}}" disabled="{{decOff}}" style="width: 46px; height: 46px; border: 0; background: #FFFFFF; color: #17201B; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: {{decOpacity}}"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14"></path></svg></button>
+<input id="madet" type="number" min="1" value="{{qty}}" onChange="{{onQty}}" style="width: 50px; height: 46px; border: 0; border-left: 1px solid #DCE3DD; border-right: 1px solid #DCE3DD; text-align: center; font: inherit; font-size: 17px; font-weight: 600; color: #17201B; outline-offset: -2px">
+<button type="button" aria-label="Artır" onClick="{{inc}}" disabled="{{incOff}}" style="width: 46px; height: 46px; border: 0; background: #FFFFFF; color: #17201B; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: {{incOpacity}}"><svg class="ic" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</div>
+<sc-if value="{{isT2}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 6px 0 0; font-size: 13.5px; font-weight: 600; color: #1D6A39">Bu adette {{saveText}} tasarruf edersiniz.</p>
+</sc-if>
+<p style="margin: 6px 0 14px; font-size: 13px; color: #56635B">Toplu alımda adede özel fiyat için <a href="Teklif-Mobil.dc.html">teklif isteyin</a>.</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.45; color: #56635B">Ürün, seçenek ve adet teklif formuna hazır gelir. Üyelik gerekmez.</p>
+</div>
+
+<div style="margin-top: 8px; background: #FFFFFF">
+<div role="tablist" aria-label="Ürün bilgileri" style="display: flex; overflow-x: auto; background: #EEF1EE; border-bottom: 1px solid #DCE3DD">
+<button type="button" role="tab" aria-selected="{{sel0}}" onClick="{{tab0}}" style="flex: none; height: 52px; padding: 0 16px; border: 0; border-top: 3px solid transparent; border-bottom: 3px solid {{tb0}}; background: transparent; font: inherit; font-size: 15px; font-weight: 600; color: {{tc0}}; cursor: pointer; white-space: nowrap">Ürün bilgisi</button>
+<button type="button" role="tab" aria-selected="{{sel1}}" onClick="{{tab1}}" style="flex: none; height: 52px; padding: 0 16px; border: 0; border-top: 3px solid transparent; border-bottom: 3px solid {{tb1}}; background: transparent; font: inherit; font-size: 15px; font-weight: 600; color: {{tc1}}; cursor: pointer; white-space: nowrap">Yorumlar (0)</button>
+<button type="button" role="tab" aria-selected="{{sel2}}" onClick="{{tab2}}" style="flex: none; height: 52px; padding: 0 16px; border: 0; border-top: 3px solid transparent; border-bottom: 3px solid {{tb2}}; background: transparent; font: inherit; font-size: 15px; font-weight: 600; color: {{tc2}}; cursor: pointer; white-space: nowrap">Soru ve cevap</button>
+<button type="button" role="tab" aria-selected="{{sel4}}" onClick="{{tab4}}" style="flex: none; height: 52px; padding: 0 16px; border: 0; border-top: 3px solid transparent; border-bottom: 3px solid {{tb4}}; background: transparent; font: inherit; font-size: 15px; font-weight: 600; color: {{tc4}}; cursor: pointer; white-space: nowrap">Önerileriniz</button>
+</div>
+<div role="tabpanel" style="padding: 16px">
+
+<sc-if value="{{is0}}" hint-placeholder-val="{{ true }}">
+<ul style="margin: 0 0 16px; padding-left: 18px; font-size: 14.5px; line-height: 1.75">
+<li>Küçük balonlu, 1. kalite patpat (hava kabarcıklı) naylon.</li>
+<li>Rulo eni 100 cm, uzunluğu 50 metredir.</li>
+<li>Brüt ağırlık ort. 1,6 kg, net ağırlık ort. 1,5 kg'dır.</li>
+<li>Cam şişe ve kavanozları sarmak, koli boşluklarını doldurmak için kullanılır.</li>
+<li>Rulo olarak, adet bazında satılır.</li>
+</ul>
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; border: 1px solid #DCE3DD">
+<tbody>
+<tr style="background: #F8FAF7"><th scope="row" style="width: 45%; text-align: left; padding: 9px 12px; font-weight: 500; color: #56635B">Balon boyutu</th><td style="padding: 9px 12px">Küçük</td></tr>
+<tr><th scope="row" style="width: 45%; text-align: left; padding: 9px 12px; font-weight: 500; color: #56635B">En × uzunluk</th><td style="padding: 9px 12px">100 cm × 50 m</td></tr>
+<tr style="background: #F8FAF7"><th scope="row" style="width: 45%; text-align: left; padding: 9px 12px; font-weight: 500; color: #56635B">Brüt / net ağırlık</th><td style="padding: 9px 12px">1,6 / 1,5 kg (ort.)</td></tr>
+<tr><th scope="row" style="width: 45%; text-align: left; padding: 9px 12px; font-weight: 500; color: #56635B">Satış birimi</th><td style="padding: 9px 12px">1 rulo</td></tr>
+</tbody>
+</table>
+</sc-if>
+
+<sc-if value="{{is1}}" hint-placeholder-val="{{ false }}">
+<h2 style="margin: 0 0 6px; font-size: 17px; font-weight: 600">Henüz yorum yok</h2>
+<p style="margin: 0 0 14px; font-size: 14.5px; line-height: 1.55; color: #56635B">Ürünü satın aldıysanız ilk yorumu siz yazın. Yorumlar yalnızca satın alan müşterilerden alınır.</p>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 46px; border-radius: 10px; background: #1D6A39; color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 600">Yorum yaz</a>
+</sc-if>
+
+<sc-if value="{{is2}}" hint-placeholder-val="{{ false }}">
+<form style="display: flex; flex-direction: column; gap: 8px">
+<label for="msoru" style="font-size: 14px; font-weight: 600">Sorunuz</label>
+<textarea id="msoru" rows="3" placeholder="Örn. 30 cm genişliğinde de kesiyor musunuz?" style="padding: 10px 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B; resize: vertical"></textarea>
+<p style="margin: 0; font-size: 12.5px; color: #56635B">Yanıtımız bu sayfada yayınlanır. Kişisel bilgi yazmayın.</p>
+<button type="submit" style="height: 46px; margin-top: 4px; border: 0; border-radius: 10px; background: #1D6A39; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Soru sor</button>
+</form>
+</sc-if>
+
+<sc-if value="{{is4}}" hint-placeholder-val="{{ false }}">
+<form style="display: flex; flex-direction: column; gap: 8px">
+<label for="moneri" style="font-size: 14px; font-weight: 600">Öneriniz</label>
+<textarea id="moneri" rows="3" style="padding: 10px 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B; resize: vertical"></textarea>
+<label for="moneri-eposta" style="font-size: 14px; font-weight: 600; margin-top: 4px">E-posta <span style="font-weight: 400; color: #56635B">(isteğe bağlı)</span></label>
+<input id="moneri-eposta" type="email" style="height: 46px; padding: 0 12px; border: 1px solid #C9D2CB; border-radius: 10px; font: inherit; font-size: 15px; color: #17201B">
+<button type="submit" style="height: 46px; margin-top: 4px; border: 0; border-radius: 10px; background: #1D6A39; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer">Gönder</button>
+</form>
+</sc-if>
+
+</div>
+</div>
+
+<section style="margin-top: 8px; padding: 18px 0 20px; background: #FFFFFF">
+<h2 style="margin: 0 16px 12px; font-size: 18px; font-weight: 600">Benzer ürünler</h2>
+<div style="display: flex; gap: 12px; overflow-x: auto; padding: 0 16px">
+<a href="#" style="flex: none; width: 200px; border: 1px solid #DCE3DD; border-radius: 14px; overflow: hidden; color: #17201B; text-decoration: none; background: #FFFFFF"><img src="/_blob/be08d0b785bfe11d9dbb1aa01137f5f2" alt="Küçük balonlu patpat naylon, 50 cm" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block"><span style="display: block; padding: 10px 12px 2px; font-size: 14px; font-weight: 600; line-height: 1.35">Küçük Balonlu Patpat Naylon – 50 cm × 50 m</span><span style="display: block; padding: 2px 12px 12px; font-size: 16px; font-weight: 700">219,42 ₺</span></a>
+<a href="#" style="flex: none; width: 200px; border: 1px solid #DCE3DD; border-radius: 14px; overflow: hidden; color: #17201B; text-decoration: none; background: #FFFFFF"><img src="/_blob/0c6175d14aa95f2b8b2161a13d25b0d9" alt="Büyük balonlu patpat naylon rulosu" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block"><span style="display: block; padding: 10px 12px 2px; font-size: 14px; font-weight: 600; line-height: 1.35">Büyük Balonlu Patpat Naylon – 120 cm, 1 rulo</span><span style="display: block; padding: 2px 12px 12px; font-size: 16px; font-weight: 700">2.160,00 ₺</span></a>
+<a href="#" style="flex: none; width: 200px; border: 1px solid #DCE3DD; border-radius: 14px; overflow: hidden; color: #17201B; text-decoration: none; background: #FFFFFF"><img src="/_blob/97bb07516cefc3e4579d571399138aa3" alt="Büyük balonlu patpat naylon, metre ile" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block"><span style="display: block; padding: 10px 12px 2px; font-size: 14px; font-weight: 600; line-height: 1.35">Büyük Balonlu Patpat Naylon – 120 cm, metre ile</span><span style="display: block; padding: 2px 12px 12px; font-size: 16px; font-weight: 700">70,00 ₺ / m</span></a>
+</div>
+</section>
+</div>
+
+<div style="flex: none; padding: 10px 16px 14px; display: flex; align-items: center; gap: 14px; background: #FFFFFF; border-top: 1px solid #DCE3DD">
+<div style="flex: none; min-width: 104px"><div style="font-size: 12.5px; color: #56635B">Tahmini · {{qty}} adet</div><div style="font-size: 19px; font-weight: 700">{{totalText}}</div></div>
+<a href="Teklif-Mobil.dc.html" style="flex: 1; height: 50px; box-sizing: border-box; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 10px; background: #1D6A39; color: #FFFFFF; font-size: 16px; font-weight: 600;"><svg class="ic" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg>Teklif iste</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"tukendi":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const max = 99999;
+    const qty = s.qty === undefined ? 1 : s.qty;
+    const tab = s.tab === undefined ? 0 : s.tab;
+    const fav = !!s.fav;
+    const alarm = !!s.alarm;
+    const t2 = qty >= 5;
+    const unit = t2 ? 424 : 438.84;
+    const fmt = (n) => n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺';
+    const set = (n) => this.setState({ qty: Math.min(max, Math.max(1, n)) });
+    const go = (i) => () => this.setState({ tab: i });
+    const tc = (i) => (tab === i ? '#17201B' : '#56635B');
+    const tb = (i) => (tab === i ? '#1D6A39' : 'transparent');
+    return {
+      tukendi: !!this.props.tukendi,
+      qty: qty,
+      unitText: fmt(unit),
+      totalText: fmt(unit * qty),
+      saveText: fmt((438.84 - 424) * qty),
+      dec: () => set(qty - 1),
+      inc: () => set(qty + 1),
+      onQty: (e) => { const v = parseInt(e.target.value, 10); set(isNaN(v) ? 1 : v); },
+      pickT1: () => set(1),
+      pickT2: () => set(5),
+      isT2: t2,
+      notT2: !t2,
+      t1Border: t2 ? '#DCE3DD' : '#1D6A39',
+      t1Bg: t2 ? '#FFFFFF' : '#E6F0E9',
+      t2Border: t2 ? '#1D6A39' : '#DCE3DD',
+      t2Bg: t2 ? '#E6F0E9' : '#FFFFFF',
+      decOff: qty <= 1,
+      incOff: qty >= max,
+      decOpacity: qty <= 1 ? 0.35 : 1,
+      incOpacity: qty >= max ? 0.35 : 1,
+      tab0: go(0), tab1: go(1), tab2: go(2), tab3: go(3), tab4: go(4),
+      goReviews: go(1),
+      is0: tab === 0, is1: tab === 1, is2: tab === 2, is3: tab === 3, is4: tab === 4,
+      sel0: tab === 0, sel1: tab === 1, sel2: tab === 2, sel3: tab === 3, sel4: tab === 4,
+      tc0: tc(0), tc1: tc(1), tc2: tc(2), tc3: tc(3), tc4: tc(4),
+      tb0: tb(0), tb1: tb(1), tb2: tb(2), tb3: tb(3), tb4: tb(4),
+      fav: fav,
+      toggleFav: () => this.setState({ fav: !fav }),
+      favLabel: fav ? 'Favorilerden çıkar' : 'Favorilere ekle',
+      favColor: fav ? '#B42318' : '#3D4A42',
+      favFill: fav ? '#B42318' : 'none',
+      alarm: alarm,
+      toggleAlarm: () => this.setState({ alarm: !alarm }),
+      alarmShort: alarm ? 'Alarm kuruldu' : 'Fiyat alarmı',
+      alarmColor: alarm ? '#1D6A39' : '#3D4A42',
+      alarmWeight: alarm ? 600 : 400
+    };
+  }
+}
+</script>
+</body>
+</html>

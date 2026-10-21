@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Teklif formu – mobil</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1D6A39}a:hover{color:#134C28}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.ic{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+input::placeholder,textarea::placeholder{color:#6B6F64}
+:focus-visible{outline:2px solid #1D6A39;outline-offset:2px}
+</style>
+</helmet>
+<div style="position: relative; width: 390px; height: 844px; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; background: #F5F2EC; font-family: 'IBM Plex Sans', sans-serif; color: #17201B">
+<svg width="0" height="0" aria-hidden="true" style="position: absolute; overflow: hidden">
+<defs>
+<filter id="t-leke" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="4" seed="4"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.52  0 0 0 0 0.46  0 0 0 0 0.38  1.7 0 0 0 -0.62"></feColorMatrix></filter>
+<filter id="t-kum" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="1" seed="2"></feTurbulence><feColorMatrix type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.31  0 0 0 0 0.25  5 0 0 0 -2.85"></feColorMatrix></filter>
+<linearGradient id="t-seffaf" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#B9CACB" stop-opacity="0.85"></stop><stop offset="0.3" stop-color="#F2F8F8" stop-opacity="0.55"></stop><stop offset="0.7" stop-color="#DCE8E9" stop-opacity="0.5"></stop><stop offset="1" stop-color="#A9BDBF" stop-opacity="0.9"></stop></linearGradient>
+<linearGradient id="t-gumus" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#7E8487"></stop><stop offset="0.35" stop-color="#E9ECED"></stop><stop offset="0.65" stop-color="#B3B8BA"></stop><stop offset="1" stop-color="#6F7578"></stop></linearGradient>
+<linearGradient id="t-beyaz" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#D2D1CC"></stop><stop offset="0.35" stop-color="#FFFFFF"></stop><stop offset="0.65" stop-color="#EEEDE9"></stop><stop offset="1" stop-color="#C6C5C0"></stop></linearGradient>
+<linearGradient id="t-siyah" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#121212"></stop><stop offset="0.35" stop-color="#4B4B4B"></stop><stop offset="0.65" stop-color="#2A2A2A"></stop><stop offset="1" stop-color="#0E0E0E"></stop></linearGradient>
+<linearGradient id="t-gold" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#86651F"></stop><stop offset="0.35" stop-color="#EAD28E"></stop><stop offset="0.65" stop-color="#B8963F"></stop><stop offset="1" stop-color="#7A5B1B"></stop></linearGradient>
+<radialGradient id="t-golge" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#3B3226" stop-opacity="0.35"></stop><stop offset="1" stop-color="#3B3226" stop-opacity="0"></stop></radialGradient>
+</defs>
+</svg>
+<header style="flex: none; height: 60px; padding: 0 12px 0 4px; display: flex; align-items: center; gap: 4px; background: #FFFFFF; border-bottom: 1px solid #DCE3DD">
+<a href="Kategori-Mobil.dc.html" aria-label="Geri" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 10px; color: #17201B"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></a>
+<span style="flex: 1; font-size: 17px; font-weight: 700">Teklif iste</span>
+<span style="font-size: 13px; color: #5A5F55">Üyelik gerekmez</span>
+</header>
+
+<sc-if value="{{formAcik}}" hint-placeholder-val="{{ true }}">
+<div style="flex: 1; min-height: 0; overflow-y: auto; padding: 14px 14px 20px">
+<sc-if value="{{hataVar}}" hint-placeholder-val="{{ false }}">
+<div role="alert" style="margin-bottom: 14px; padding: 12px 14px; border-radius: 12px; background: #FBEAE7; color: #8A1F12; font-size: 14.5px">{{hataOzet}}</div>
+</sc-if>
+<section aria-label="Ürün" style="padding: 12px; margin-bottom: 16px; background: #FFFDF9; border: 1px solid #E4DCCD; border-radius: 16px">
+<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px">
+<span style="position: relative; flex: none; width: 60px; height: 60px; border-radius: 10px; overflow: hidden"><svg aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"><rect width="100%" height="100%" fill="#E9E3D7"></rect><rect width="100%" height="100%" filter="url(#t-leke)"></rect><rect width="100%" height="100%" filter="url(#t-kum)"></rect></svg><svg viewBox="0 0 120 160" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 40px; height: 53px; transform: translate(-50%, -50%)"><rect x="34" y="20" width="52" height="20" rx="3" fill="url(#{{kapakR}})"></rect><rect x="37" y="40" width="46" height="6" rx="1" fill="url(#t-seffaf)"></rect><path d="M31 52Q31 46 38 46H82Q89 46 89 52V140Q89 148 81 148H39Q31 148 31 140Z" fill="url(#t-seffaf)" stroke="#6E7F80" stroke-opacity="0.4"></path></svg></span>
+<span style="flex: 1; min-width: 0"><span style="display: block; font-size: 15px; font-weight: 600">370 ml uzun cam kavanoz</span><a href="Kategori-Mobil.dc.html" style="font-size: 13.5px; font-weight: 600">Ürünü değiştir</a></span>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 10px">
+<div><label for="tm-secenek" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Kapak</label><select id="tm-secenek" value="{{secenek}}" onChange="{{onSecenek}}" style="width: 100%; height: 48px; padding: 0 8px; border: 1.5px solid #CFC6B6; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 15px; color: #17201B"><option value="gumus">Gümüş metal</option><option value="beyaz">Beyaz plastik + conta</option><option value="siyah">Siyah metal</option><option value="gold">Gold metal</option></select></div>
+<div><label for="tm-adet" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Adet <span style="color: #8A1F12">*</span></label><input id="tm-adet" type="number" min="1" inputmode="numeric" value="{{adet}}" onChange="{{onAdet}}" aria-invalid="{{adetHata}}" style="width: 100%; box-sizing: border-box; height: 48px; padding: 0 12px; border: 1.5px solid {{adetCizgi}}; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #17201B"></div>
+</div>
+<table style="width: 100%; margin-top: 12px; border-collapse: collapse; font-size: 14px">
+<caption class="sr">Adet fiyatları</caption>
+<tbody>
+<sc-for list="{{kademeler}}" as="k" hint-placeholder-count="3">
+<tr style="background: {{k.zemin}}"><td style="padding: 8px; border-top: 1px solid #ECE5D8; font-weight: {{k.agirlik}}">{{k.ad}}</td><td style="padding: 8px; border-top: 1px solid #ECE5D8; text-align: right; font-weight: {{k.agirlik}}">{{k.fiyat}}</td></tr>
+</sc-for>
+</tbody>
+</table>
+</section>
+<form style="display: flex; flex-direction: column; gap: 16px">
+<div><label for="tm-ad" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Ad soyad <span style="color: #8A1F12">*</span></label><input id="tm-ad" type="text" autocomplete="name" value="{{ad}}" onChange="{{onAd}}" aria-invalid="{{adHata}}" style="width: 100%; box-sizing: border-box; height: 48px; padding: 0 12px; border: 1.5px solid {{adCizgi}}; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #17201B"><sc-if value="{{adHata}}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 13px; font-weight: 600; color: #8A1F12">Adınızı yazın.</p></sc-if></div>
+<div><label for="tm-firma" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Firma adı <span style="font-weight: 400; color: #5A5F55">(isteğe bağlı)</span></label><input id="tm-firma" type="text" autocomplete="organization" value="{{firma}}" onChange="{{onFirma}}" style="width: 100%; box-sizing: border-box; height: 48px; padding: 0 12px; border: 1.5px solid #CFC6B6; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #17201B"></div>
+<div><label for="tm-tel" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Telefon <span style="color: #8A1F12">*</span></label><input id="tm-tel" type="tel" autocomplete="tel" placeholder="05xx xxx xx xx" value="{{tel}}" onChange="{{onTel}}" aria-invalid="{{telHata}}" style="width: 100%; box-sizing: border-box; height: 48px; padding: 0 12px; border: 1.5px solid {{telCizgi}}; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #17201B"><sc-if value="{{telHata}}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 13px; font-weight: 600; color: #8A1F12">En az 10 haneli numara yazın.</p></sc-if></div>
+<div><label for="tm-eposta" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">E-posta <span style="color: #8A1F12">*</span></label><input id="tm-eposta" type="email" autocomplete="email" value="{{eposta}}" onChange="{{onEposta}}" aria-invalid="{{epostaHata}}" style="width: 100%; box-sizing: border-box; height: 48px; padding: 0 12px; border: 1.5px solid {{epostaCizgi}}; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #17201B"><sc-if value="{{epostaHata}}" hint-placeholder-val="{{ false }}"><p style="margin: 6px 0 0; font-size: 13px; font-weight: 600; color: #8A1F12">Geçerli bir e-posta yazın.</p></sc-if></div>
+<div><label for="tm-teslim" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Teslimat <span style="font-weight: 400; color: #5A5F55">(isteğe bağlı)</span></label><select id="tm-teslim" value="{{teslim}}" onChange="{{onTeslim}}" style="width: 100%; height: 48px; padding: 0 10px; border: 1.5px solid #CFC6B6; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; color: #17201B"><option value="">Seçiniz</option><option value="magaza">Bursa mağazadan teslim alırım</option><option value="kargo">Kargo ile gönderilsin</option></select></div>
+<div><label for="tm-not" style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600">Not <span style="font-weight: 400; color: #5A5F55">(isteğe bağlı)</span></label><textarea id="tm-not" rows="3" value="{{not}}" onChange="{{onNot}}" placeholder="Başka ürünler, baskı, teslim tarihi…" style="width: 100%; box-sizing: border-box; padding: 12px; border: 1.5px solid #CFC6B6; border-radius: 10px; background: #FFFFFF; font: inherit; font-size: 16px; line-height: 1.5; color: #17201B; resize: vertical"></textarea></div>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.5; color: #3D4A42">Bilgileriniz yalnızca bu teklif için kullanılır. Ayrıntılar <a href="#">KVKK aydınlatma metninde</a>.</p>
+<label style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.45; color: #3D4A42; cursor: pointer"><input type="checkbox" checked="{{izin}}" onChange="{{tIzin}}" style="width: 20px; height: 20px; margin: 0; accent-color: #1D6A39; flex: none">Kampanya ve fiyat duyurularını almak istiyorum. (İsteğe bağlı)</label>
+</form>
+</div>
+<div style="flex: none; display: flex; align-items: center; gap: 12px; padding: 10px 14px 14px; background: #FFFFFF; border-top: 1px solid #DCE3DD">
+<div style="flex: none; min-width: 110px"><div style="font-size: 12.5px; color: #56635B">Tahmini tutar</div><div style="font-size: 18px; font-weight: 700">{{toplamYazi}}</div></div>
+<button type="button" onClick="{{gonder}}" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; height: 52px; border: 0; border-radius: 10px; background: #1D6A39; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer"><svg class="ic" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg>Teklif iste</button>
+</div>
+</sc-if>
+
+<sc-if value="{{gonderildi}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding: 28px 18px">
+<span style="width: 56px; height: 56px; border-radius: 28px; background: #E6F0E9; color: #1D6A39; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg></span>
+<h1 style="margin: 0; font-size: 24px; font-weight: 700">Talebiniz bize ulaştı</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #3D4A42">{{tesekkur}}</p>
+<dl style="margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; font-size: 15px"><dt style="color: #5A5F55">Ürün</dt><dd style="margin: 0; font-weight: 600">370 ml uzun cam kavanoz – {{secenekAd}}</dd><dt style="color: #5A5F55">Adet</dt><dd style="margin: 0; font-weight: 600">{{adetYazi}}</dd><dt style="color: #5A5F55">Tahmini</dt><dd style="margin: 0; font-weight: 600">{{toplamYazi}}</dd></dl>
+<a href="Kategori-Mobil.dc.html" style="display: flex; align-items: center; justify-content: center; height: 50px; margin-top: 8px; border-radius: 10px; background: #1D6A39; color: #FFFFFF; text-decoration: none; font-size: 16px; font-weight: 600">Ürünlere dön</a>
+<button type="button" onClick="{{yeniTalep}}" style="height: 50px; border: 1.5px solid #1D6A39; border-radius: 10px; background: #FFFFFF; color: #1D6A39; font: inherit; font-size: 16px; font-weight: 600; cursor: pointer">Başka bir ürün sor</button>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const set = (p) => this.setState(p);
+    const SEC = {
+      gumus: { ad: 'Gümüş metal kapak', kapak: 't-gumus', fiyat: [20.82, 19.06, 16.41] },
+      beyaz: { ad: 'Beyaz plastik kapak + köpük conta', kapak: 't-beyaz', fiyat: [25.33, 23.09, 19.65] },
+      siyah: { ad: 'Siyah metal kapak', kapak: 't-siyah', fiyat: [20.82, 20.82, 16.41] },
+      gold: { ad: 'Gold metal kapak', kapak: 't-gold', fiyat: [21.07, 21.07, 16.47] }
+    };
+    const KAD = [{ ad: '1–23 adet', min: 1 }, { ad: '24–47 adet', min: 24 }, { ad: '48 adet ve üzeri', min: 48 }];
+    const fmt = (n) => n.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ₺';
+    const secenek = s.secenek || 'gumus';
+    const sec = SEC[secenek];
+    const adetStr = s.adet ?? '500';
+    const adet = parseInt(adetStr, 10);
+    const adetOk = adet >= 1;
+    let ki = 0;
+    KAD.forEach((k, i) => { if (adetOk && adet >= k.min) ki = i; });
+    const birim = sec.fiyat[ki];
+    const kademeler = KAD.map((k, i) => ({
+      ad: k.ad, fiyat: fmt(sec.fiyat[i]),
+      zemin: adetOk && i === ki ? '#E6F0E9' : 'transparent', agirlik: adetOk && i === ki ? 700 : 400
+    }));
+    const ad = s.ad ?? '';
+    const tel = s.tel ?? '';
+    const eposta = s.eposta ?? '';
+    const d = !!s.denendi;
+    const adHata = d && !ad.trim();
+    const telHata = d && tel.replace(/\D/g, '').length < 10;
+    const epostaHata = d && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(eposta.trim());
+    const adetHata = d && !adetOk;
+    const hatalar = [adHata, telHata, epostaHata, adetHata].filter(Boolean).length;
+    const kirmizi = '#B3261E', normal = '#CFC6B6';
+    const gonderildi = !!s.gonderildi;
+    return {
+      formAcik: !gonderildi, gonderildi: gonderildi,
+      ad: ad, onAd: (e) => set({ ad: e.target.value }), adHata: adHata, adCizgi: adHata ? kirmizi : normal,
+      firma: s.firma ?? '', onFirma: (e) => set({ firma: e.target.value }),
+      tel: tel, onTel: (e) => set({ tel: e.target.value }), telHata: telHata, telCizgi: telHata ? kirmizi : normal,
+      eposta: eposta, onEposta: (e) => set({ eposta: e.target.value }), epostaHata: epostaHata, epostaCizgi: epostaHata ? kirmizi : normal,
+      secenek: secenek, onSecenek: (e) => set({ secenek: e.target.value }), secenekAd: sec.ad, kapakR: sec.kapak,
+      adet: adetStr, onAdet: (e) => set({ adet: e.target.value }), adetHata: adetHata, adetCizgi: adetHata ? kirmizi : normal,
+      teslim: s.teslim ?? '', onTeslim: (e) => set({ teslim: e.target.value }),
+      not: s.not ?? '', onNot: (e) => set({ not: e.target.value }),
+      izin: !!s.izin, tIzin: () => set({ izin: !s.izin }),
+      kademeler: kademeler,
+      adetYazi: adetOk ? adet.toLocaleString('tr-TR') + ' adet' : '—',
+      birimYazi: fmt(birim),
+      toplamYazi: adetOk ? fmt(adet * birim) : '—',
+      hataVar: hatalar > 0,
+      hataOzet: hatalar === 1 ? '1 alanı düzeltin; işaretli alana bakın.' : hatalar + ' alanı düzeltin; işaretli alanlara bakın.',
+      gonder: () => {
+        const ok = ad.trim() && tel.replace(/\D/g, '').length >= 10 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(eposta.trim()) && adetOk;
+        set(ok ? { gonderildi: true, denendi: false } : { denendi: true });
+      },
+      tesekkur: 'Teşekkürler ' + (ad.trim().split(' ')[0] || '') + '. Talebinizin bir kopyası ' + (eposta.trim() || 'e-posta adresinize') + ' adresine gönderildi. Hafta içi aynı gün içinde sizi arayacağız.',
+      yeniTalep: () => set({ gonderildi: false, adet: '', not: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>
