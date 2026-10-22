@@ -1,4 +1,4 @@
-Güvenlik testi raporu – 22.10.2026 13:03:34
+Güvenlik testi raporu – 22.10.2026 13:43:28
 
 GEÇTİ (27)
   ✓ [Başlıklar] Apache: 9 güvenlik başlığının hepsi tanımlı
@@ -19,7 +19,7 @@ GEÇTİ (27)
   ✓ [Girdi] Telefon bağlantısı yalnızca rakam ve + içeriyor (ayar dosyasından enjeksiyon yok)
   ✓ [Girdi] WhatsApp numarası yalnızca rakam
   ✓ [Girdi] HTML kaçış fonksiyonu < > " ' karakterlerinin hepsini kaçırıyor
-  ✓ [Dayanıklılık] Aşırı uzun/zararlı 10 arama sorgusu hatasız; en yavaşı 32 ms (tarayıcıyı kilitlemiyor)
+  ✓ [Dayanıklılık] Aşırı uzun/zararlı 10 arama sorgusu hatasız; en yavaşı 29 ms (tarayıcıyı kilitlemiyor)
   ✓ [HTTP] 22 gizli dosya / klasör dışına çıkma denemesinin hiçbiri içerik vermedi
   ✓ [HTTP] Açık yönlendirme (başka siteye gönderme) denemeleri engellendi
   ✓ [HTTP] Başlık enjeksiyonu (CRLF) denemesi etkisiz

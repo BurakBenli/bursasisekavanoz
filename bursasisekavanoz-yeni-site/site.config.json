@@ -25,7 +25,7 @@
   "numuneAktif": true,
   "depodanTeslim": true,
   "sayfaBasinaUrun": 24,
-  "barindirma": "apache",
+  "barindirma": "netlify",
   "eskiAlanAdi": "https://bursasisekavanoz.com",
   "demo": {
     "fiyatKademeleri": [

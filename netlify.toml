@@ -1,0 +1,13 @@
+# Netlify yayın ayarı. Site bursasisekavanoz-yeni-site/ klasöründe; CSV'den düz HTML/CSS/JS üretilir.
+# Netlify yalnızca dist/ klasörünü yayınlar; yönetim paneli (sunucu.js) Netlify'da çalışmaz,
+# panel bilgisayarda kullanılır ve değişiklik GitHub'a gönderilince Netlify siteyi yeniden üretir.
+# 301 yönlendirmeleri (_redirects) ve güvenlik başlıkları (_headers) build tarafından dist/ içine yazılır
+# (site.config.json -> "barindirma": "netlify").
+
+[build]
+  base = "bursasisekavanoz-yeni-site"
+  command = "node build/build.js"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"

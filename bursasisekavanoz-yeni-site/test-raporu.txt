@@ -1,4 +1,4 @@
-Kontrol raporu – 22.10.2026 13:03:30
+Kontrol raporu – 22.10.2026 13:43:26
 
 GEÇTİ (45)
   ✓ [SEO] Her sayfada <title> var (2703 sayfa)

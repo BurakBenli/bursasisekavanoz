@@ -1,4 +1,4 @@
-Panel testi raporu – 22.10.2026 13:04:02
+Panel testi raporu – 22.10.2026 13:43:55
 
 GEÇTİ (27)
   ✓ [Güvenlik] Panel sayfası katı CSP, noindex ve no-store ile geliyor; giriş yapmadan çerez koymuyor
@@ -19,7 +19,7 @@ GEÇTİ (27)
   ✓ [Ürün] Yüklenen görsel panelde önizlenebiliyor
   ✓ [Ürün] Yeni ürün (kod 15648) yeni ürün sayfasıyla birlikte CSV dosyalarına yazılıyor
   ✓ [Ürün] Her kayıttan önce eski CSV dosyası yedekleniyor
-  ✓ [Yayın] Kayıttan sonra site kendiliğinden yeniden üretiliyor (2.528 sn); yeni ürün sayfası ve görseli sitede
+  ✓ [Yayın] Kayıttan sonra site kendiliğinden yeniden üretiliyor (2.408 sn); yeni ürün sayfası ve görseli sitede
   ✓ [Yayın] Güncelleme ve sayfa adı değişikliği sitede görünüyor; sayfa adresi değişmiyor
   ✓ [Yayın] Siteden kaldırılan ürünün sayfası yayından kalkıyor
   ✓ [Yayın] Eski siteden gelen (Google'da adresi olan) ürün kalıcı silinemiyor; yalnızca kaldırılabiliyor

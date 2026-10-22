@@ -1,6 +1,6 @@
-Build raporu – 22.10.2026 13:03:27
+Build raporu – 22.10.2026 13:43:23
 
-2702 sayfa, 2723 dosya üretildi (2.4 sn).
+2702 sayfa, 2723 dosya üretildi (2.2 sn).
 
 BİLGİ
 - 12702 ürün okundu, 12701 aktif, 2255 ürün ailesi.

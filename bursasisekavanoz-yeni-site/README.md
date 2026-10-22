@@ -136,6 +136,21 @@ Fiyat girilmeyen ürünlerde sitede "Teklif isteyin" yazar. Fiyat girilince biri
 
 - **Panelli (önerilen):** Node.js barındırma ile `sunucu.js` çalıştırılır. Kurulum yukarıda, "Yönetim paneli" bölümünde.
 - **Panelsiz (statik):** Yalnızca `dist/` klasörü yüklenir. Ürünler Excel'le güncellenir ve her değişiklikte yeniden build alınıp yüklenir. Adımlar aşağıda.
+- **Netlify (şu anki ayar):** Site GitHub'dan otomatik yayınlanır. Panel bilgisayarda kullanılır; değişiklik GitHub'a gönderilince Netlify siteyi yeniden üretir. Adımlar aşağıda, "Netlify ile yayın" başlığında.
+
+### Netlify ile yayın
+
+Ayarlar hazır: depo kökündeki `netlify.toml` Netlify'a sitenin `bursasisekavanoz-yeni-site/` klasöründe olduğunu, `node build/build.js` ile üretildiğini ve `dist/` klasöründen yayınlanacağını söyler. `site.config.json` içinde `"barindirma": "netlify"` olduğu için 301 yönlendirmeleri `_redirects`, güvenlik başlıkları `_headers` dosyasına yazılır.
+
+1. app.netlify.com adresinde "Sign up with GitHub" ile hesap açın.
+2. "Add new site" → "Import an existing project" → GitHub → `BurakBenli/bursasisekavanoz` deposunu seçin (gizli depo için Netlify'a erişim izni verin) → "Deploy". Build ayarlarına dokunmayın; `netlify.toml` dosyasından okunur.
+3. Yayın bitince "Domain management" bölümünden alan adını ekleyin ve Netlify'ın verdiği DNS kayıtlarını alan adı firmanızın paneline girin. HTTPS otomatik gelir.
+4. `site.config.json` dosyasında `siteUrl` değerini gerçek alan adıyla değiştirin (canonical ve sitemap adresleri bundan üretilir).
+5. Kontrol: `node test/canli-kontrol.js https://alanadiniz.com`
+
+**Ürün güncelleme:** Bilgisayarda `npm start` ile paneli açın (`http://localhost:8080/admin/`), değişiklikleri yapın, sonra değişen `veri/` ve `gorseller/` dosyalarını GitHub'a gönderin. Netlify 1-2 dakikada yeni hâli yayınlar. Panel Netlify'da çalışmaz; Netlify yalnızca hazır dosyaları yayınlar.
+
+**Yönlendirme sayısı:** `_redirects` dosyasında eski siteden ~12.700 kural var. Netlify belgelerinde kesin bir sınır yok, ancak çok büyük yönlendirme dosyalarında yayının başarısız olabileceği belirtiliyor. Yayın bu yüzden hata verirse yönlendirmeler tek bir Netlify Edge Function'a taşınmalıdır (Cloudflare için `sunucu-ayarlari/cloudflare/_worker.js` aynı yöntemi kullanır).
 
 1. **Ayarlar:** `site.config.json` dosyasında `firma` bilgilerini ve `siteUrl` (gerçek alan adı) değerini doldurun. `barindirma` değerine sunucu türünü yazın: `node` (panelli kurulum), `apache` (cPanel ve çoğu paylaşımlı hosting), `nginx`, `iis` (Windows hosting), `netlify` ya da `cloudflare`.
 2. **Metinler:** `icerik/sayfalar/` klasöründeki `[FİRMA: ...]` alanlarını doldurun.

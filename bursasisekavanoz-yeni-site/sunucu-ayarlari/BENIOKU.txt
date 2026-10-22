@@ -1,6 +1,6 @@
 Sunucu ayarları (build tarafından her seferinde yeniden üretilir)
 
-Seçili barındırma: apache  (site.config.json -> "barindirma")
+Seçili barındırma: netlify  (site.config.json -> "barindirma")
 Seçili türün dosyaları dist/ klasörüne otomatik kopyalandı.
 
 node         sunucu.js (yönetim paneli dahil; Node.js barındırma gerekir)
