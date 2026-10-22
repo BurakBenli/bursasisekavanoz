@@ -1,0 +1,50 @@
+[
+  {
+    "kod": "kolonya-siseleri",
+    "ad": "Kolonya Şişeleri",
+    "aciklama": "Kolonya şişeleri: tıpalı ve sprey kapaklı cam ve PET seçenekler.",
+    "menude": true
+  },
+  {
+    "kod": "parfum-esans-siseleri",
+    "ad": "Parfüm ve Esans Şişeleri",
+    "aciklama": "Parfüm ve esans şişeleri: sprey ve tıpa kapaklı, şık gövdeli şişeler.",
+    "menude": true
+  },
+  {
+    "kod": "kozmetik-ambalaj",
+    "ad": "Kozmetik Ambalajları",
+    "aciklama": "Krem, serum, losyon ve şampuan ambalajları: pompalı, damlalıklı ve kavanoz seçenekleri.",
+    "menude": true
+  },
+  {
+    "kod": "aromaterapi-oda-kokusu",
+    "ad": "Aromaterapi ve Oda Kokusu",
+    "aciklama": "Uçucu yağ, difüzör ve oda kokusu şişeleri.",
+    "menude": true
+  },
+  {
+    "kod": "gida-icecek-ambalaj",
+    "ad": "Gıda ve İçecek Ambalajları",
+    "aciklama": "Bal, reçel, sos, zeytinyağı ve içecek şişe ve kavanozları.",
+    "menude": true
+  },
+  {
+    "kod": "ecza-medikal",
+    "ad": "Ecza ve Medikal Şişeler",
+    "aciklama": "Şurup, damla ve ilaç şişeleri; amber cam ve çocuk kilitli kapak seçenekleri.",
+    "menude": true
+  },
+  {
+    "kod": "temizlik-kimyasal",
+    "ad": "Temizlik ve Kimyasal Şişeleri",
+    "aciklama": "Temizlik ve kimyasal ürünler için trigerli, kilitli ve dayanıklı şişeler.",
+    "menude": true
+  },
+  {
+    "kod": "hediyelik-dugun-nisan",
+    "ad": "Hediyelik ve Organizasyon",
+    "aciklama": "Düğün, nişan ve hediyelik için mini şişe ve kavanozlar.",
+    "menude": true
+  }
+]

@@ -1,0 +1,28 @@
+Sunucu ayarları (build tarafından her seferinde yeniden üretilir)
+
+Seçili barındırma: apache  (site.config.json -> "barindirma")
+Seçili türün dosyaları dist/ klasörüne otomatik kopyalandı.
+
+node         sunucu.js (yönetim paneli dahil; Node.js barındırma gerekir)
+apache/      .htaccess ve eski/.htaccess (cPanel, Plesk Apache, çoğu paylaşımlı hosting)
+nginx/       site.conf (örnek sunucu bloğu) + ud.map (ürün kodu -> yeni adres)
+iis/         web.config + rewritemaps.config (Windows hosting; URL Rewrite modülü gerekir.
+             rewritemaps.config büyük bir dosya; IIS'in yapılandırma dosyası boyut sınırına takılırsa
+             hosting firmasından MaxWebConfigFileSizeInKB değerini artırmasını isteyin;
+             ayrıca statik sıkıştırma listesine application/json eklenmesini isteyin: arama kataloğu 1,6 MB yerine ~250 KB iner)
+netlify/     _redirects + _headers
+cloudflare/  _worker.js (Pages gelişmiş mod; _redirects dosyasının 2.000 kural sınırı yüzünden)
+
+yonlendirmeler-301.csv  eski adres -> yeni adres tam listesi (kontrol ve Search Console için)
+yonlendirmeler.json     yerel test sunucusunun (npm run serve) kullandığı aynı tablo
+
+Güvenlik başlıkları (tüm türlerde aynı):
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-site
+  X-Permitted-Cross-Domain-Policies: none
+  Strict-Transport-Security: max-age=31536000; includeSubDomains  (yalnızca HTTPS)

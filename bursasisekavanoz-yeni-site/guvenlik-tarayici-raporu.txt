@@ -1,0 +1,15 @@
+Tarayıcı güvenlik testi – 22.10.2026 10:27
+
+GEÇTİ (10)
+  ✓ Adres/parametre XSS: 12 yük × 5 giriş noktası = 60 deneme, hiçbiri çalışmadı
+  ✓ Arama kutusu XSS: 12 yük öneri listesinde ve sonuç sayfasında düz metin kaldı
+  ✓ Zehirlenmiş sepet verisi (teklifSepeti:v1) kod çalıştırmadı, javascript: bağlantısı oluşmadı
+  ✓ Teklif formu: kişisel bilgiler tarayıcıda saklanmıyor, çerez yok, zararlı not çalışmadı
+  ✓ WhatsApp mesajı yalnızca wa.me adresine, URL kodlanmış olarak gidiyor
+  ✓ Prototip kirletme denemesi etkisiz (__proto__, constructor parametreleri)
+  ✓ Başka bir site bu siteyi iframe içinde gösteremiyor (clickjacking koruması)
+  ✓ Test boyunca hiç CSP ihlali olmadı (sitenin kendi kodu politikaya uyuyor)
+  ✓ Hiçbir sayfa dış adrese istek göndermedi (yalnızca kullanıcının bastığı WhatsApp bağlantısı)
+  ✓ Saldırı denemeleri sırasında sayfa betikleri çökmedi
+
+HATA (0)

@@ -1,0 +1,19 @@
+Build raporu – 22.10.2026 13:03:27
+
+2702 sayfa, 2723 dosya üretildi (2.4 sn).
+
+BİLGİ
+- 12702 ürün okundu, 12701 aktif, 2255 ürün ailesi.
+- Fiyatı girilmiş aktif ürün: 0.
+- Görseli olan aktif ürün: 0; olmayanlarda şema çizimi kullanılır.
+- Ağız çapı girilmiş aktif ürün: 2964 (uyan kapak önerileri için gerekli).
+- 30 aile adı birden fazla ailede kullanılıyor (ör. "100 ml Cam Şişe"). Adresler aile kodu sayesinde benzersiz; adları ayırt edici yapmanız önerilir.
+- 1190 ailede aynı adı taşıyan ürünler var (ör. kodlar 155, 7125). Ürün sayfasında "Tüm seçenekler" tablosu kodla ayırır; adları düzeltmeniz önerilir.
+- 301 yönlendirme: 12710 eski adres (12702 ürün, 8 sabit sayfa); 1 pasif ürün kategori sayfasına yönlendirildi.
+
+UYARI (3)
+- Firma tarafından doldurulacak [FİRMA: ...] alanları olan sayfalar: banka-hesap-bilgileri.html, gizlilik-politikasi.html, hakkimizda.html, iptal-iade-degisim-politikasi.html, mesafeli-satis-sozlesmesi.html, sss.html
+- site.config.json: firma bilgilerinde [FİRMA: ...] yer tutucuları var (adres, vergi bilgileri).
+- site.config.json: firma adı, telefon, WhatsApp ve alan adı hâlâ örnek değerlerde.
+
+HATA (0)

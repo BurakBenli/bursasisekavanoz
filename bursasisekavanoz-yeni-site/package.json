@@ -1,0 +1,22 @@
+{
+  "name": "ambalaj-katalog-sitesi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Düz HTML/CSS/JS ambalaj kataloğu: CSV'den statik site üretici, arama, filtre, teklif sepeti, 301 yönlendirmeleri ve ürün yönetim paneli.",
+  "scripts": {
+    "start": "node sunucu.js",
+    "build": "node build/build.js",
+    "demo": "node build/build.js --demo && node build/serve.js",
+    "serve": "node build/serve.js",
+    "panel:sifre": "node panel/sifre.js",
+    "kontrol": "node test/kontrol.js",
+    "test": "node build/build.js && node test/kontrol.js && node test/guvenlik-testi.js && node test/seo-denetimi.js && node test/panel-testi.js",
+    "guvenlik": "node test/guvenlik-testi.js",
+    "seo": "node test/seo-denetimi.js",
+    "canli": "node test/canli-kontrol.js",
+    "panel:test": "node test/panel-testi.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

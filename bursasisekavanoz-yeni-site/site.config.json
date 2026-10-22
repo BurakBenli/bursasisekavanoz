@@ -1,0 +1,38 @@
+{
+  "firma": {
+    "ad": "Örnek Ambalaj",
+    "kisaAd": "Örnek Ambalaj",
+    "slogan": "Cam ve plastik ambalaj · toptan ve perakende",
+    "telefon": "0 (224) 000 00 00",
+    "whatsapp": "905000000000",
+    "eposta": "info@ornek-ambalaj.com",
+    "adres": "[FİRMA: açık adres], Bursa",
+    "haritaLinki": "",
+    "calismaSaatleri": "Hafta içi 08.30–18.00 · Cumartesi 09.00–14.00",
+    "vergiDairesi": "[FİRMA: vergi dairesi]",
+    "vergiNo": "[FİRMA: vergi no]",
+    "mersisNo": "",
+    "sosyal": { "instagram": "", "facebook": "", "youtube": "" }
+  },
+  "siteUrl": "https://www.ornek-ambalaj.com",
+  "dil": "tr",
+  "paraBirimi": "TRY",
+  "kdvOrani": 20,
+  "fiyatlarKdvHaric": true,
+  "fiyatKademeleri": [
+    { "min": 1, "carpan": 1 }
+  ],
+  "numuneAktif": true,
+  "depodanTeslim": true,
+  "sayfaBasinaUrun": 24,
+  "barindirma": "apache",
+  "eskiAlanAdi": "https://bursasisekavanoz.com",
+  "demo": {
+    "fiyatKademeleri": [
+      { "min": 1, "carpan": 1 },
+      { "min": 100, "carpan": 0.9 },
+      { "min": 500, "carpan": 0.82 },
+      { "min": 2000, "carpan": 0.74 }
+    ]
+  }
+}

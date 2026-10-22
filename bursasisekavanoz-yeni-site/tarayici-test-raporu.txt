@@ -1,0 +1,43 @@
+Tarayıcı testi raporu – 22.10.2026 10:27
+
+GEÇTİ (38)
+  ✓ 15 sayfada konsol hatası yok
+  ✓ CSP ihlali yok (tüm script/stil kendi alan adından)
+  ✓ Sayfalar dış adreslere istek göndermiyor
+  ✓ Yazarken öneriler çıkıyor (6 öneri)
+  ✓ Sorgu doğru ayrıştırılıyor (hacim, renk, aparat)
+  ✓ Enter ile arama sayfası açılıyor, 13 sonuç kartı
+  ✓ "fısfıs" araması sonuç veriyor (24) ve anlaşılıyor
+  ✓ "05 lt trigerli" araması sonuç veriyor (23) ve anlaşılıyor
+  ✓ "damlalik 30ml" araması sonuç veriyor (24) ve anlaşılıyor
+  ✓ "24 mm pompa" araması sonuç veriyor (7) ve anlaşılıyor
+  ✓ Sonuçsuz aramada yönlendirici boş durum mesajı var
+  ✓ 7 XSS yükü çalışmadı (window.__xss tanımsız, uyarı penceresi yok)
+  ✓ Zararlı metin düz yazı olarak gösteriliyor
+  ✓ Bozuk/zararlı sepet verisi kod çalıştırmadı
+  ✓ javascript: adresi güvenli adrese çevrildi
+  ✓ Geçersiz sepet satırları (kimliksiz, eksi adet, çöp veri) atıldı
+  ✓ Esc ile sepet çekmecesi kapanıyor
+  ✓ Renk filtresi listeyi daraltıyor ve adrese yazılıyor
+  ✓ Sayfa yenilenince filtreler adresten geri yükleniyor
+  ✓ Filtreli kart, filtreye uyan seçeneğe bağlanıyor
+  ✓ Sıralama çalışıyor ve adrese yazılıyor
+  ✓ Filtreleri temizle çalışıyor
+  ✓ Adrese elle yazılmış geçersiz filtre değerleri yok sayılıyor
+  ✓ Seçenek değişince ürün adı, kod ve adres güncelleniyor
+  ✓ Adet kutusu çalışıyor
+  ✓ Teklif sepetine ekleme ve numune isteme çalışıyor (sayaç 2)
+  ✓ Teklif sayfası sepetteki 2 kalemi gösteriyor
+  ✓ Boş form gönderilmiyor, anlaşılır hata veriyor
+  ✓ WhatsApp mesajı ürün kodu, adet, numune ve iletişim bilgisiyle hazırlanıyor
+  ✓ Ürün ve teklif akışında JS hatası yok
+  ✓ Eski adres → ürün sayfası, doğru seçenek (13)
+  ✓ Eski adres → ürün sayfası, doğru seçenek (3386)
+  ✓ Eski adres → ürün sayfası, doğru seçenek (11836)
+  ✓ Telefonda yatay taşma yok (6 sayfa)
+  ✓ Mobil filtre paneli açılıyor ve canlı güncelleniyor
+  ✓ Panel kapanınca filtre uygulanmış kalıyor
+  ✓ Açık ve koyu tema ekran görüntüleri test/ekran/ klasörüne kaydedildi
+  ✓ CSV'deki zararlı ad/açıklama sayfada düz metin, çalışmıyor; sayfa JS'i bozulmuyor
+
+HATA (0)

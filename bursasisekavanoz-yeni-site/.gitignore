@@ -1,0 +1,8 @@
+# üretilen site (build ile yeniden oluşur)
+/dist/
+/dist-yeni/
+/dist-eski/
+
+# yönetim paneli: şifre özeti ve CSV yedekleri (sunucuda kalır, depoya girmez)
+/panel-veri/
+*.yaziliyor

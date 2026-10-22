@@ -1,0 +1,12 @@
+Hız ölçümü – 22.10.2026 10:28 – telefon, yavaş 4G, 4× yavaş işlemci, gzip'li yerel sunucu
+Hedef (Google 'iyi' eşiği): LCP ≤ 2,5 sn · CLS ≤ 0,1 · TBT ≤ 200 ms
+
+  ✓ Ana sayfa     FCP  0.7 sn · LCP  0.7 sn · CLS 0.000 · TBT  111 ms · aktarılan     31 KB  (/)
+  ✓ Kategori      FCP  0.7 sn · LCP  0.7 sn · CLS 0.000 · TBT   88 ms · aktarılan    286 KB · filtre/sonuç hazır  3.3 sn  (/cam-sise/)
+  ✓ Alt kategori  FCP  0.8 sn · LCP  0.8 sn · CLS 0.000 · TBT  108 ms · aktarılan    285 KB · filtre/sonuç hazır  3.4 sn  (/cam-sise/damlalikli/)
+  ! Ürün          FCP  0.8 sn · LCP  0.8 sn · CLS 0.000 · TBT  202 ms · aktarılan     38 KB  (/urun/500-ml-bidon-a0307/)
+  ! Arama         FCP  0.6 sn · LCP  2.6 sn · CLS 0.000 · TBT   75 ms · aktarılan    283 KB · filtre/sonuç hazır  3.3 sn  (/arama/?q=30%20ml%20amber)
+  ✓ Teklif        FCP  0.7 sn · LCP  0.7 sn · CLS 0.000 · TBT   49 ms · aktarılan    282 KB  (/teklif/)
+  ✓ Büyük ürün ailesi FCP  0.8 sn · LCP  0.8 sn · CLS 0.000 · TBT  182 ms · aktarılan     46 KB  (/urun/100-ml-pet-silindir-sise-keskin-sert-a0001/)
+
+Eşiği geçemeyen sayfa: 2

@@ -1,0 +1,63 @@
+# Apache / cPanel ayarları – build tarafından üretildi, elle değiştirmeyin (site.config.json'dan gelir)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+<IfModule mod_mime.c>
+  AddType application/json .json
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # HTTPS'e yönlendir
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  # Tek alan adı: ornek-ambalaj.com -> www.ornek-ambalaj.com
+  RewriteCond %{HTTP_HOST} ^ornek-ambalaj\.com$ [NC]
+  RewriteRule ^ https://www.ornek-ambalaj.com%{REQUEST_URI} [R=301,L]
+  # Gizli dosyalar (.git, .env vb.) erişime kapalı; .well-known açık
+  RewriteRule (^|/)\.(?!well-known/) - [R=404,L]
+  # Eski sabit sayfalar
+  RewriteRule ^product-list/?$ /urunler/ [R=301,L,NC]
+  RewriteRule ^About/about/?$ /hakkimizda/ [R=301,L,NC]
+  RewriteRule ^About/contact/?$ /iletisim/ [R=301,L,NC]
+  RewriteRule ^About/distance-selling-contract/?$ /mesafeli-satis-sozlesmesi/ [R=301,L,NC]
+  RewriteRule ^About/cancel-return-exchange-policy/?$ /iptal-iade-degisim-politikasi/ [R=301,L,NC]
+  RewriteRule ^About/privacy-policy/?$ /gizlilik-politikasi/ [R=301,L,NC]
+  RewriteRule ^About/membership-contract/?$ /uyelik-sozlesmesi/ [R=301,L,NC]
+  RewriteRule ^About/bank-account/?$ /banka-hesap-bilgileri/ [R=301,L,NC]
+  # Eski ürün adresleri (…-ud-1234): kurallar eski/.htaccess içinde, yalnızca eski adres gelince okunur
+  RewriteRule ^[^/]*-ud-([0-9]+)/?$ eski/$1 [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-site"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+  Header unset X-Powered-By
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|json)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpe?g|png|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript application/json image/svg+xml
+</IfModule>

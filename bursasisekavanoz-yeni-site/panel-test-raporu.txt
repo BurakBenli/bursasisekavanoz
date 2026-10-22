@@ -1,0 +1,32 @@
+Panel testi raporu – 22.10.2026 13:04:02
+
+GEÇTİ (27)
+  ✓ [Güvenlik] Panel sayfası katı CSP, noindex ve no-store ile geliyor; giriş yapmadan çerez koymuyor
+  ✓ [Güvenlik] Giriş yapmadan ürün listesi, ürün, görsel ve ekleme isteği 401 ile reddediliyor
+  ✓ [Güvenlik] Yanlış şifre ya da yanlış kullanıcı adı reddediliyor; hata mesajı hangisinin yanlış olduğunu söylemiyor
+  ✓ [Güvenlik] Başka siteden gönderilen giriş isteği (doğru şifreyle bile) reddediliyor
+  ✓ [Güvenlik] 5 hatalı denemeden sonra o adres 15 dakika kilitleniyor (doğru şifre de kabul edilmiyor)
+  ✓ [Güvenlik] JSON olmayan giriş isteği reddediliyor (basit form ile CSRF denemesi çalışmaz)
+  ✓ [Güvenlik] Doğru şifreyle giriş: çerez HttpOnly, SameSite=Strict, yalnızca /admin yolunda; ayrı CSRF belirteci veriliyor
+  ✓ [Güvenlik] HTTPS arkasında çerez Secure bayraklı ve HSTS başlığı var
+  ✓ [Güvenlik] Oturum varken bile CSRF belirteci yanlışsa ya da istek başka siteden geliyorsa değişiklik reddediliyor
+  ✓ [Güvenlik] Panel ve site üzerinden klasör dışına çıkma / kaynak dosya okuma denemeleri içerik vermiyor
+  ✓ [Güvenlik] Sitenin kendisi hâlâ çerez koymuyor (oturum çerezi yalnızca panelde)
+  ✓ [Ürün] Kategori, aile ve özellik seçenekleri geliyor
+  ✓ [Ürün] 9 hatalı form (boş ad, Excel formülü, tanımsız kategori, harf fiyat, küsuratlı koli, klasör dışı görsel…) alan adıyla reddediliyor, dosyaya yazılmıyor
+  ✓ [Ürün] SVG, görsel kılığında dosya ve 8 MB üstü yükleme reddediliyor
+  ✓ [Ürün] Görsel yükleniyor; dosya adı güvenli biçime çevriliyor
+  ✓ [Ürün] Yüklenen görsel panelde önizlenebiliyor
+  ✓ [Ürün] Yeni ürün (kod 15648) yeni ürün sayfasıyla birlikte CSV dosyalarına yazılıyor
+  ✓ [Ürün] Her kayıttan önce eski CSV dosyası yedekleniyor
+  ✓ [Yayın] Kayıttan sonra site kendiliğinden yeniden üretiliyor (2.528 sn); yeni ürün sayfası ve görseli sitede
+  ✓ [Yayın] Güncelleme ve sayfa adı değişikliği sitede görünüyor; sayfa adresi değişmiyor
+  ✓ [Yayın] Siteden kaldırılan ürünün sayfası yayından kalkıyor
+  ✓ [Yayın] Eski siteden gelen (Google'da adresi olan) ürün kalıcı silinemiyor; yalnızca kaldırılabiliyor
+  ✓ [Yayın] Kaldırılan eski ürünün eski adresi kategori sayfasına 301 ile yönleniyor
+  ✓ [Yayın] Panelden eklenen ürün kalıcı silinebiliyor
+  ✓ [Yayın] Build hata verirse yayındaki site bozulmuyor; panel hatayı gösteriyor
+  ✓ [Güvenlik] Çıkıştan sonra eski oturum çerezi geçersiz
+  ✓ [Güvenlik] Farklı adreslerden toplam 30 hatalı denemede giriş 15 dakika herkese kapanıyor (kısa şifreye karşı)
+
+HATA (0)

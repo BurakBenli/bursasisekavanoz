@@ -3,9 +3,12 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "bursasisekavanoz-yeni-site/sunucu.js",
+        "8080"
+      ],
+      "port": 8080
     }
   ]
 }

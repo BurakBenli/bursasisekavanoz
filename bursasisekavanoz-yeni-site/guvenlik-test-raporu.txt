@@ -1,0 +1,34 @@
+Güvenlik testi raporu – 22.10.2026 13:03:34
+
+GEÇTİ (27)
+  ✓ [Başlıklar] Apache: 9 güvenlik başlığının hepsi tanımlı
+  ✓ [Başlıklar] nginx: 9 güvenlik başlığının hepsi tanımlı
+  ✓ [Başlıklar] IIS: 9 güvenlik başlığının hepsi tanımlı
+  ✓ [Başlıklar] Netlify: 9 güvenlik başlığının hepsi tanımlı
+  ✓ [Başlıklar] Cloudflare: 9 güvenlik başlığının hepsi tanımlı
+  ✓ [Başlıklar] CSP sıkı: yalnızca kendi alan adı; eklenti, <base> değişikliği, çerçeveleme ve dışa form gönderimi kapalı
+  ✓ [Başlıklar] HSTS en az 1 yıl
+  ✓ [Yönlendirme] 12710 yönlendirme hedefinin hepsi site içi göreli adres (başka siteye yönlendirme yok)
+  ✓ [Yönlendirme] Ürün yönlendirme anahtarları yalnızca rakam (sunucu kuralına enjeksiyon yok)
+  ✓ [Yönlendirme] Apache eski/.htaccess: 12703 kuralda kaçışsız karakter yok
+  ✓ [Yönlendirme] nginx ud.map: 12702 satırın biçimi güvenli
+  ✓ [Gizli bilgi] Kaynak kodda ve yayın klasöründe parola, API anahtarı ya da özel anahtar yok (39 kaynak dosya + dist)
+  ✓ [Tedarik zinciri] Hiç npm bağımlılığı yok: üçüncü taraf paket kaynaklı açık riski sıfır
+  ✓ [Tedarik zinciri] Sayfalar dış sunucudan script/stil yüklemiyor (CDN ele geçirilse bile etkilenmez)
+  ✓ [security.txt] Güvenlik açığı bildirim dosyası geçerli (Contact, gelecekte Expires)
+  ✓ [Girdi] Telefon bağlantısı yalnızca rakam ve + içeriyor (ayar dosyasından enjeksiyon yok)
+  ✓ [Girdi] WhatsApp numarası yalnızca rakam
+  ✓ [Girdi] HTML kaçış fonksiyonu < > " ' karakterlerinin hepsini kaçırıyor
+  ✓ [Dayanıklılık] Aşırı uzun/zararlı 10 arama sorgusu hatasız; en yavaşı 32 ms (tarayıcıyı kilitlemiyor)
+  ✓ [HTTP] 22 gizli dosya / klasör dışına çıkma denemesinin hiçbiri içerik vermedi
+  ✓ [HTTP] Açık yönlendirme (başka siteye gönderme) denemeleri engellendi
+  ✓ [HTTP] Başlık enjeksiyonu (CRLF) denemesi etkisiz
+  ✓ [HTTP] Yazma/izleme metotları (POST, PUT, DELETE, TRACE...) 405 ile reddediliyor
+  ✓ [HTTP] Çok uzun adres sunucuyu bozmuyor (404), sonrasında site çalışıyor
+  ✓ [HTTP] Site hiç çerez koymuyor (çerez banner'ı gerekmez; oturum çalma riski yok)
+  ✓ [HTTP] Güvenlik başlıkları sayfa, 404, yönlendirme ve dosya yanıtlarının hepsinde var
+  ✓ [HTTP] Dosyalar doğru içerik türüyle ve nosniff ile gönderiliyor
+
+UYARI (0)
+
+HATA (0)

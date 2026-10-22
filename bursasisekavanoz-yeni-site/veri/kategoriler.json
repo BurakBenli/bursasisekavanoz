@@ -1,0 +1,377 @@
+[
+  {
+    "kod": "cam-sise",
+    "ad": "Cam Şişeler",
+    "menu_adi": "Cam Şişeler",
+    "menude": true,
+    "aciklama": "Damlalıklı, spreyli, pompalı, tıpalı ve vidalı kapaklı cam şişeler. Amber, şeffaf, yeşil ve mavi cam; 5 ml'den litrelik şişelere kadar.",
+    "url": "/cam-sise/",
+    "alt": [
+      {
+        "kod": "kapakli",
+        "ad": "Kapaklı (vidalı, twist-off, kilitli, diğer)",
+        "aciklama": ""
+      },
+      {
+        "kod": "damlalikli",
+        "ad": "Damlalıklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipali",
+        "ad": "Tıpalı ve mantar tıpalı",
+        "aciklama": ""
+      },
+      {
+        "kod": "spreyli",
+        "ad": "Spreyli ve trigerli",
+        "aciklama": ""
+      },
+      {
+        "kod": "pompali",
+        "ad": "Pompalı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapaksiz",
+        "ad": "Kapaksız",
+        "aciklama": ""
+      },
+      {
+        "kod": "akiticili",
+        "ad": "Akıtıcılı ve flip-top",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "plastik-sise",
+    "ad": "Plastik Şişeler (PET, PE, PP)",
+    "menu_adi": "Plastik Şişeler",
+    "menude": true,
+    "aciklama": "PET, polietilen (PE) ve PP şişeler: spreyli, trigerli, pompalı, flip-top ve akıtıcılı kapak seçenekleriyle.",
+    "url": "/plastik-sise/",
+    "alt": [
+      {
+        "kod": "kapakli",
+        "ad": "Kapaklı (vidalı, twist-off, kilitli, diğer)",
+        "aciklama": ""
+      },
+      {
+        "kod": "spreyli",
+        "ad": "Spreyli ve trigerli",
+        "aciklama": ""
+      },
+      {
+        "kod": "akiticili",
+        "ad": "Akıtıcılı ve flip-top",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipali",
+        "ad": "Tıpalı ve mantar tıpalı",
+        "aciklama": ""
+      },
+      {
+        "kod": "pompali",
+        "ad": "Pompalı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapaksiz",
+        "ad": "Kapaksız",
+        "aciklama": ""
+      },
+      {
+        "kod": "damlalikli",
+        "ad": "Damlalıklı",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "sise",
+    "ad": "Diğer Şişeler",
+    "menu_adi": "Diğer Şişeler",
+    "menude": false,
+    "aciklama": "Malzeme bilgisi henüz girilmemiş şişeler.",
+    "url": "/sise/",
+    "alt": [
+      {
+        "kod": "spreyli",
+        "ad": "Spreyli ve trigerli",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapakli",
+        "ad": "Kapaklı (vidalı, twist-off, kilitli, diğer)",
+        "aciklama": ""
+      },
+      {
+        "kod": "pompali",
+        "ad": "Pompalı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapaksiz",
+        "ad": "Kapaksız",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipali",
+        "ad": "Tıpalı ve mantar tıpalı",
+        "aciklama": ""
+      },
+      {
+        "kod": "akiticili",
+        "ad": "Akıtıcılı ve flip-top",
+        "aciklama": ""
+      },
+      {
+        "kod": "damlalikli",
+        "ad": "Damlalıklı",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "cam-kavanoz",
+    "ad": "Cam Kavanozlar",
+    "menu_adi": "Cam Kavanozlar",
+    "menude": true,
+    "aciklama": "Bal, reçel, sos ve kozmetik için twist-off, metal ve mantar kapaklı cam kavanozlar.",
+    "url": "/cam-kavanoz/",
+    "alt": [
+      {
+        "kod": "kapakli",
+        "ad": "Kapaklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapaksiz",
+        "ad": "Kapaksız",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipali",
+        "ad": "Tıpalı ve mantar kapaklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "pompali",
+        "ad": "Pompalı (krem, losyon)",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "plastik-kavanoz",
+    "ad": "Plastik Kavanozlar",
+    "menu_adi": "Plastik Kavanozlar",
+    "menude": true,
+    "aciklama": "Krem, kozmetik ve gıda için PET ve PP kavanozlar.",
+    "url": "/plastik-kavanoz/",
+    "alt": [
+      {
+        "kod": "kapakli",
+        "ad": "Kapaklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipali",
+        "ad": "Tıpalı ve mantar kapaklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapaksiz",
+        "ad": "Kapaksız",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "kavanoz",
+    "ad": "Diğer Kavanozlar",
+    "menu_adi": "Diğer Kavanozlar",
+    "menude": false,
+    "aciklama": "Malzeme bilgisi henüz girilmemiş kavanozlar.",
+    "url": "/kavanoz/",
+    "alt": [
+      {
+        "kod": "kapakli",
+        "ad": "Kapaklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipali",
+        "ad": "Tıpalı ve mantar kapaklı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kapaksiz",
+        "ad": "Kapaksız",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "kapak-aparat",
+    "ad": "Kapak ve Aparatlar",
+    "menu_adi": "Kapak ve Aparatlar",
+    "menude": true,
+    "aciklama": "Şişe ve kavanozlar için kapak, damlalık, pompa, sprey, triger başlıkları, tıpa ve mantarlar. Ağız çapına göre filtreleyin.",
+    "url": "/kapak-ve-aparat/",
+    "alt": [
+      {
+        "kod": "sise-kapagi",
+        "ad": "Şişe kapakları",
+        "aciklama": ""
+      },
+      {
+        "kod": "damlalik",
+        "ad": "Damlalık takımları ve pipetler",
+        "aciklama": ""
+      },
+      {
+        "kod": "kavanoz-kapagi",
+        "ad": "Kavanoz kapakları (twist-off, metal)",
+        "aciklama": ""
+      },
+      {
+        "kod": "sprey-triger",
+        "ad": "Sprey ve triger başlıkları",
+        "aciklama": ""
+      },
+      {
+        "kod": "tipa-mantar",
+        "ad": "Tıpa ve mantarlar",
+        "aciklama": ""
+      },
+      {
+        "kod": "pompa",
+        "ad": "Pompalar",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "tup-bidon",
+    "ad": "Tüp, Bidon ve Galon",
+    "menu_adi": "Tüp ve Bidon",
+    "menude": true,
+    "aciklama": "Kozmetik tüpleri, bidonlar, galonlar ve kovalar.",
+    "url": "/tup-bidon-galon/",
+    "alt": [
+      {
+        "kod": "bidon-galon",
+        "ad": "Bidon / Galon",
+        "aciklama": ""
+      },
+      {
+        "kod": "tup",
+        "ad": "Tüp",
+        "aciklama": ""
+      },
+      {
+        "kod": "kova",
+        "ad": "Kova",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "mutfak-sunum",
+    "ad": "Mutfak, Sunum ve Saklama",
+    "menu_adi": "Mutfak ve Sunum",
+    "menude": true,
+    "aciklama": "Bardak, baharatlık, yağdanlık, sunum ve saklama ürünleri.",
+    "url": "/mutfak-sunum-saklama/",
+    "alt": [
+      {
+        "kod": "bardak",
+        "ad": "Bardak",
+        "aciklama": ""
+      },
+      {
+        "kod": "mutfak-aktar-ekipmani",
+        "ad": "Mutfak & aktar ekipmanı",
+        "aciklama": ""
+      },
+      {
+        "kod": "baharatlik-yagdanlik",
+        "ad": "Baharatlık / Yağdanlık",
+        "aciklama": ""
+      },
+      {
+        "kod": "tepsi-sunum",
+        "ad": "Tepsi / sunum",
+        "aciklama": ""
+      },
+      {
+        "kod": "saklama-kabi",
+        "ad": "Saklama kabı",
+        "aciklama": ""
+      },
+      {
+        "kod": "fanus-akvaryum",
+        "ad": "Fanus / akvaryum",
+        "aciklama": ""
+      },
+      {
+        "kod": "vazo",
+        "ad": "Vazo",
+        "aciklama": ""
+      }
+    ]
+  },
+  {
+    "kod": "diger",
+    "ad": "Diğer Ambalaj ve Ekipman",
+    "menu_adi": "Diğer",
+    "menude": true,
+    "aciklama": "Teneke, kutu, huni, laboratuvar ve diğer ambalaj ürünleri.",
+    "url": "/diger-ambalaj/",
+    "alt": [
+      {
+        "kod": "diger",
+        "ad": "Diğer",
+        "aciklama": ""
+      },
+      {
+        "kod": "teneke",
+        "ad": "Teneke",
+        "aciklama": ""
+      },
+      {
+        "kod": "laboratuvar-olcu-kabi",
+        "ad": "Laboratuvar & ölçü kabı",
+        "aciklama": ""
+      },
+      {
+        "kod": "kutu",
+        "ad": "Kutu",
+        "aciklama": ""
+      },
+      {
+        "kod": "huni",
+        "ad": "Huni",
+        "aciklama": ""
+      },
+      {
+        "kod": "torba-kese",
+        "ad": "Torba / kese",
+        "aciklama": ""
+      },
+      {
+        "kod": "enjektor",
+        "ad": "Enjektör",
+        "aciklama": ""
+      },
+      {
+        "kod": "koli-karton",
+        "ad": "Koli / Karton",
+        "aciklama": ""
+      }
+    ]
+  }
+]

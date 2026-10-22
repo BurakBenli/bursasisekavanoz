@@ -1,0 +1,52 @@
+Kontrol raporu – 22.10.2026 13:03:30
+
+GEÇTİ (45)
+  ✓ [SEO] Her sayfada <title> var (2703 sayfa)
+  ✓ [SEO] Dizine açık 2698 sayfanın başlıkları benzersiz
+  ✓ [SEO] Meta açıklamalar benzersiz
+  ✓ [SEO] Meta açıklama uzunlukları 50–160 karakter
+  ✓ [SEO] Canonical adresleri doğru (mutlak, sayfanın kendisi)
+  ✓ [SEO] Her sayfada tek H1
+  ✓ [SEO] Tüm sayfalarda lang="tr"
+  ✓ [SEO] Open Graph başlık ve görsel etiketleri var
+  ✓ [SEO] Ana sayfa dışındaki dizine açık sayfalarda JSON-LD var
+  ✓ [SEO] JSON-LD blokları geçerli (schema.org, breadcrumb sırası, ürün teklif bilgisi)
+  ✓ [SEO] Tüm <img> etiketlerinde alt var
+  ✓ [Link] 204045 iç bağlantı ve kaynak kontrol edildi, kırık yok
+  ✓ [Link] Dizine açık her sayfa en az bir iç bağlantı alıyor
+  ✓ [Hız] En büyük HTML 221 KB (/urun-dizini/); 300 KB sınırının altında
+  ✓ [Hız] JavaScript toplam 65 KB, CSS 36 KB, katalog 1641 KB (sıkıştırmasız; yalnızca arama/listelerde yüklenir)
+  ✓ [Güvenlik] Satır içi çalıştırılabilir script yok (yalnızca JSON veri blokları) – sıkı CSP ile uyumlu
+  ✓ [Güvenlik] Satır içi olay öznitelikleri (onclick vb.) yok
+  ✓ [Güvenlik] Satır içi style="" yok – CSP style-src 'self' ile uyumlu
+  ✓ [Güvenlik] javascript: bağlantısı yok
+  ✓ [Güvenlik] Yeni sekmede açılan tüm bağlantılarda rel="noopener"
+  ✓ [Güvenlik] Hiçbir sayfa dış sunucudan script, stil, yazı tipi ya da görsel yüklemiyor
+  ✓ [Güvenlik] JS dosyalarında eval / new Function / document.write yok
+  ✓ [Güvenlik] dist/ içinde kaynak veri, betik ya da gizli dosya yok (CSV, .git, .env...)
+  ✓ [Sitemap] 2698 adres; hepsi mevcut sayfa
+  ✓ [Sitemap] noindex sayfalar sitemap'te yok
+  ✓ [Sitemap] Dizine açık tüm sayfalar sitemap'te
+  ✓ [Sitemap] robots.txt sitemap adresini gösteriyor
+  ✓ [301] 12702 eski ürün adresinin hepsi tabloda (kod bazlı)
+  ✓ [301] 12702 ürün yönlendirmesinin hedef sayfası mevcut
+  ✓ [301] 8 eski sabit sayfa yönlendirmesinin hedefi mevcut
+  ✓ [301] Yönlendirmeler ürünün kendi seçeneğini açıyor (?secenek=kod)
+  ✓ [301] Yönlendirme zinciri yok (tek adımda 301)
+  ✓ [301] Apache kuralları benzetimle doğrulandı (12702 kural, örnek 3.000 eski adres doğru hedefe gidiyor)
+  ✓ [301] .htaccess blokları dengeli
+  ✓ [301] nginx site.conf süslü parantezleri dengeli
+  ✓ [301] nginx ud.map 12702 satır, biçim doğru
+  ✓ [301] IIS web.config ve rewritemaps.config iyi biçimli XML
+  ✓ [301] Cloudflare _worker.js çalıştırılarak doğrulandı (200 eski adres, sabit sayfa, güvenlik başlıkları, gizli dosya)
+  ✓ [Güvenlik] Güvenlik başlıkları gönderiliyor: CSP, nosniff, X-Frame-Options, Referrer-Policy, Permissions-Policy
+  ✓ [Güvenlik] CSP sıkı: unsafe-inline, unsafe-eval ve joker yok; frame-ancestors 'none'
+  ✓ [Güvenlik] Klasör dışına çıkma ve gizli dosya denemeleri engelleniyor (404/400)
+  ✓ [301] HTTP testi: 50 eski adres 301 ile doğru sayfaya gidiyor
+  ✓ [301] Yönlendirme hedefleri 200 dönüyor
+  ✓ [SEO] Olmayan sayfa 404 durum koduyla özel 404 sayfası döndürüyor
+  ✓ [301] Eski sabit sayfa (/About/contact) → /iletisim/
+
+UYARI (0)
+
+HATA (0)

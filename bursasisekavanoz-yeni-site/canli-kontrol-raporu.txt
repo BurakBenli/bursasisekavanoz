@@ -1,0 +1,26 @@
+Canlı kontrol – http://127.0.0.1:8765 – 22.10.2026 10:17:12
+
+GEÇTİ (14)
+  ✓ Ana sayfa 200 dönüyor
+  ✓ Sunucu yazılımı sürüm bilgisi sızdırmıyor
+  ✓ Ana sayfa çerez koymuyor
+  ✓ CSS sıkıştırılarak gönderiliyor (gzip/brotli)
+  ✓ CSS/JS uzun süreli önbelleğe alınıyor
+  ✓ Arama kataloğu sıkıştırılıyor (1,6 MB yerine ~250 KB)
+  ✓ 20 örnek eski ürün adresi (…-ud-KOD) 301 ile doğru sayfaya gidiyor
+  ✓ Eski sabit sayfa /About/contact → /iletisim/
+  ✓ Olmayan sayfa 404 durum kodu veriyor (soft 404 yok)
+  ✓ Gizli/ayar dosyaları ve klasör listesi dışarıya kapalı
+  ✓ sitemap.xml yayında
+  ✓ robots.txt yayında, sitemap'i gösteriyor ve siteyi kapatmıyor
+  ✓ security.txt yayında
+  ✓ Ana sayfa dizine açık (demo build yayına alınmamış)
+
+UYARI (1)
+  ! www.127.0.0.1:8765 adresine ulaşılamadı (DNS kaydı yoksa sorun değil)
+
+HATA (2)
+  ✗ http:// adresi kalıcı olarak https'e yönleniyor – 200 null
+  ✗ Güvenlik başlıkları canlı sunucuda gönderiliyor (CSP, HSTS, nosniff, X-Frame-Options...) – eksik/hatalı: strict-transport-security
+
+Ek olarak: https://www.ssllabs.com/ssltest/ (TLS notu A olmalı) ve https://pagespeed.web.dev/ (mobil hız) ile kontrol edin.

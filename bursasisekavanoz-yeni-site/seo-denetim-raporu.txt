@@ -1,0 +1,37 @@
+SEO denetim raporu – 22.10.2026 13:03:35
+
+ÖLÇÜMLER
+  · Dizine açık sayfa: 2698 (ürün 2255, kategori/koleksiyon 74, sayfalama 360, kurumsal 8, ana sayfa 1)
+  · Başlık uzunluğu ortalama 46 karakter; 60 karakteri geçen 6.4%
+  · Marka adı eklenince 65 karakteri geçeceği için markasız bırakılan başlık: 87 (uzun ürün adları; bilerek)
+  · Ürün adresi uzunluğu ortalama 42 karakter (eski sitede ortalama ~100)
+  · Ana sayfadan tıklama derinliği: 0 tık: 1, 1 tık: 33, 2 tık: 2368, 3 tık: 182, 4 tık: 59, 5 tık: 16, 6 tık: 16, 7 tık: 16, 8 tık: 7
+  · Ürün sayfası başına gelen iç bağlantı: en az 4, ortanca 13, en çok 249
+  · Ürün sayfası ana içerik kelime sayısı: en az 105, ortanca 351
+  · Yapılandırılmış veri: BreadcrumbList 2697, WholesaleStore 1, Organization 1, WebSite 1
+  · Sayfalardaki <img>: 0 (fotoğraf yokken şema çizimi SVG kullanılır); boş alt: 0
+
+GEÇTİ (17)
+  ✓ Bütün başlıklar 65 karakterin altında (arama sonucunda kesilmez)
+  ✓ Kısa/boş başlık yok
+  ✓ Meta açıklamaların hiçbiri kelime ortasında kesilmiyor
+  ✓ Açıklamaların hepsi 70–160 karakter
+  ✓ Bütün adresler küçük harf, Türkçe karaktersiz, tireli, / ile biten ve 115 karakterden kısa
+  ✓ Dizine açık her sayfaya ana sayfadan bağlantılarla ulaşılabiliyor
+  ✓ Bütün ürün sayfaları ana sayfadan en fazla 4 tık uzakta
+  ✓ Her ürün sayfası en az 2 sayfadan bağlantı alıyor
+  ✓ Bütün 2255 ürün sayfasında "Ürün hakkında" tanıtım metni var
+  ✓ Ürün tanıtım metinlerinin hepsi birbirinden farklı
+  ✓ Bütün 74 kategori/koleksiyon sayfasında veriden üretilmiş giriş metni var
+  ✓ Ana sayfada Organization verisi var
+  ✓ İletişim sayfasında yerel işletme (WholesaleStore) verisi var
+  ✓ robots.txt CSS, JS ve görselleri engellemiyor
+  ✓ robots.txt siteyi arama motorlarına açık tutuyor; yalnızca arama, teklif ve eski/ kapalı
+  ✓ 360 sayfalama sayfası kendi adresini canonical gösteriyor ve önceki sayfaya bağlı
+  ✓ Filtreli adresler (?renk=, ?hacim=) tarayıcıda oluşur ve canonical filtresiz kategoriyi gösterir: binlerce kopya sayfa oluşmaz
+
+UYARI (2)
+  ! 25 kelimeden kısa tanıtım metni: 27 ürün (firma açıklaması eklenince uzar)
+  ! Product verisi yok: fiyat girilmediği için bilerek eklenmiyor (Google fiyatsız Product verisini hata sayar). Fiyatlar girilince otomatik eklenir.
+
+HATA (0)
