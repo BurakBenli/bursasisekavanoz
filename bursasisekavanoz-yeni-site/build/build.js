@@ -405,41 +405,104 @@ ${benzer.length ? `<section class="compat" aria-labelledby="benzer-h"><div class
 
 /* ---------------------------------------------------------------- ana sayfa */
 (function () {
-  const pickers = [["Damlalık", "Amber"], ["Sprey", null], ["Pompa", null], ["Tıpa", "Yeşil"], ["Twist-off", null, "Kavanoz"], ["Triger / tetik", null]];
-  const shelf = pickers.map(([k, c, t]) => aktifItems.find(i => i.k.includes(k) && (!c || i.c === c) && (t ? i.t === t : i.t === "Şişe"))).filter(Boolean);
-  const heights = [150, 120, 170, 135, 110, 160];
-  const kolTiles = m.kols.filter(k => kolSayi[k.kod]).map(k => `<a class="tile" href="${k.url}"><b>${esc(k.ad)}</b><span class="small muted">${esc(k.aciklama || "")}</span><span class="meta"><span class="mono">${G.fmtNum(kolSayi[k.kod])}</span> ürün ailesi</span></a>`).join("");
-  const catTiles = m.cats.filter(c => c.menude && anaSayi[c.kod]).map(c => {
+  const famSira = new Map(m.famList.map((f, i) => [f.aid, i]));
+
+  /* Kullanım alanına göre: alıcının işinden yola çıkan giriş */
+  const amaclar = m.kols.filter(k => kolSayi[k.kod]).map(k =>
+    `<li><a href="${k.url}"><span>${esc(k.ad)}</span><span class="amac-sayi">${G.fmtNum(kolSayi[k.kod])}</span></a></li>`).join("");
+
+  /* Ürün türleri: her türün temsilci çizimiyle sade bir dizin */
+  const turler = m.cats.filter(c => c.menude && anaSayi[c.kod]).map(c => {
     const f = m.famList.find(x => x.ana === c.kod);
-    return `<a class="tile cat-tile" href="${c.url}">${f ? G.gorsel(f.rep, 56, "") : ""}<span><b>${esc(c.ad)}</b><br><span class="meta"><span class="mono">${G.fmtNum(anaSayi[c.kod])}</span> ürün ailesi</span></span></a>`;
+    return `<li><a href="${c.url}"><span class="tur-cizim">${f ? G.gorsel(f.rep, 76, "") : ""}</span><b>${esc(ad2(c))}</b><span class="tur-sayi">${G.fmtNum(anaSayi[c.kod])} ürün</span></a></li>`;
   }).join("");
-  const b2b = [
-    kademe.length > 1 ? ["Kademeli fiyat", "Adet arttıkça birim fiyat düşer; koli adedi her üründe yazılı."] : ["Toptan ve perakende", "Tek koliden büyük siparişlere kadar teklif verilir."],
-    config.numuneAktif ? ["Numune", "Toplu siparişten önce numune isteyin."] : null,
-    ["Uyan kapaklar", "Şişe sayfasında aynı ağız çapındaki kapak ve aparatlar listelenir."],
-    config.depodanTeslim ? ["Depodan teslim", "Kargo yerine depodan teslim alma seçeneği."] : ["Hızlı teklif", "Teklif sepetinizi WhatsApp veya e-postayla gönderin."]
+
+  /* Öne çıkan ürünler: önerilen sıradan, her türden en fazla iki aile */
+  const turSay = {}, one = [];
+  for (const f of m.famList) {
+    if (one.length >= 8) break;
+    if (f.ana === "diger" || (turSay[f.ana] || 0) >= 2) continue;
+    turSay[f.ana] = (turSay[f.ana] || 0) + 1;
+    one.push(f);
+  }
+
+  /* Kapak bulucu: en çok çeşidi olan ağız çapları */
+  const capSay = {};
+  aktifItems.forEach(i => { if (i.t === "Kapak / aparat" && i.g) capSay[i.g] = (capSay[i.g] || 0) + 1; });
+  const caplar = Object.entries(capSay).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([g, n]) => [Number(g), n]).sort((a, b) => a[0] - b[0]);
+  /* her ağız çapı, üstten bakılmış bir şişe ağzı gibi çapıyla orantılı bir halka olarak çizilir */
+  const gMin = caplar.length ? caplar[0][0] : 0, gMax = caplar.length ? caplar[caplar.length - 1][0] : 1;
+  const halka = g => { const r = Math.round(9 + (g - gMin) / Math.max(1, gMax - gMin) * 15); return `<svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="${r}" class="halka"/><circle cx="28" cy="28" r="${Math.max(4, r - 5)}" class="halka-ic"/></svg>`; };
+
+  const wa = F.whatsapp ? `https://wa.me/${esc(F.whatsapp)}` : "";
+  const guven = [
+    "Toptan ve perakende: tek koliden büyük siparişe",
+    config.numuneAktif ? "Toplu siparişten önce numune" : null,
+    config.depodanTeslim ? "Kargo ya da depodan teslim" : null,
+    "Her şişe sayfasında uyan kapaklar listelenir"
   ].filter(Boolean);
+
+  const KAPAKLAR = [["Damlalık", "Damlalıklı"], ["Sprey", "Spreyli"], ["Pompa", "Pompalı"], ["Tıpa", "Tıpalı"], ["Triger / tetik", "Trigerli"],
+    ["Akıtıcı", "Akıtıcılı"], ["Flip-top / Disk-top", "Flip-top"], ["Mantar", "Mantar tıpalı"]];
+  const aileSay = list => new Set(list.map(i => i.f)).size;
+  /* temsilci: önerilen sıradaki ilk uygun ürün; renkli ve kapaklı olan tercih edilir */
+  const temsilci = list => list.slice().sort((a, b) => (b.c && b.k.length ? 1 : 0) - (a.c && a.k.length ? 1 : 0) || famSira.get(a.f) - famSira.get(b.f))[0];
+  /* bir bölümdeki çizimler aynı renge yığılmasın: daha önce kullanılmamış rengi seç */
+  const renkli = used => list => { const r = temsilci(list.filter(i => i.c && !used.has(i.c))) || temsilci(list); if (r && r.c) used.add(r.c); return r; };
+  const qs = o => { const p = new URLSearchParams(); Object.entries(o).forEach(([k, v]) => { if (v) p.set(k, v); }); const s = p.toString(); return s ? "?" + s : ""; };
+
+  /* Kapağına göre seçin: müşterinin ihtiyacından ("spreyli şişe lazım") giriş; her kare o kapak türündeki ürünlere gider */
+  const ktSec = renkli(new Set());
+  const kapakTiles = KAPAKLAR.map(([k, a]) => {
+    const list = aktifItems.filter(i => i.k.includes(k));
+    if (!list.length) return "";
+    const rep = ktSec(list.filter(i => i.t === "Şişe").length ? list.filter(i => i.t === "Şişe") : list);
+    return `<li><a href="/urunler/${qs({ aparat: k })}"><span class="kt-cizim">${G.gorsel(rep, 92, "")}</span><b>${esc(a)}</b><span>${G.fmtNum(aileSay(list))} ürün</span></a></li>`;
+  }).join("");
+  const kapakBolum = `<section class="ana-bolum kapak-turu" aria-labelledby="kt-baslik">
+  <div class="ana-bolum-bas"><h2 id="kt-baslik">Kapağına göre seçin</h2>${kapakCat ? `<a href="${kapakCat.url}">Yalnızca kapak ve aparatlar</a>` : ""}</div>
+  <ul class="kt-izgara">${kapakTiles}</ul>
+</section>`;
+
   const govde = `
-<section class="hero">
-  <div>
-    <div class="eyebrow">${esc(F.slogan || "")}</div>
-    <h1>Cam ve plastik şişe, kavanoz, kapak ve aparat</h1>
-    <p>Aradığınız şişeyi hacmi, rengi ve kapağıyla bulun. Ağız çapına göre uyan kapakları görün; aynı şişenin bütün renk ve kapak seçenekleri tek sayfada.</p>
-    <div class="examples" aria-label="Örnek aramalar">${ornekler.map(x => `<a class="chip" href="/arama/?q=${encodeURIComponent(x)}">${esc(x)}</a>`).join("")}</div>
-    <div class="spec-strip muted"><span><b class="mono">${G.fmtNum(aktifItems.length)}</b> ürün</span><span><b class="mono">${G.fmtNum(m.famList.length)}</b> ürün ailesi</span><span>Filtreler: hacim · renk · aparat · ağız çapı</span></div>
+<section class="ana-giris" aria-labelledby="ana-baslik">
+  <div class="ana-vitrin">
+    <h1 id="ana-baslik">Ürününüze uyan şişe, kavanoz ve kapak</h1>
+    <p class="ana-ozet">${G.fmtNum(aktifItems.length)} çeşit cam ve plastik ambalaj, toptan ve perakende. Seçtiklerinizi teklif sepetine ekleyin, fiyatı tek mesajla isteyin.</p>
+    <div class="ana-dugmeler"><a class="btn primary" href="/urunler/">Ürünlere göz atın</a>${wa ? `<a class="btn wa" href="${wa}" target="_blank" rel="noopener noreferrer">WhatsApp'tan sorun</a>` : ""}</div>
   </div>
-  <div class="shelf" aria-hidden="true">${shelf.map((it, i) => Cizim.svg(it, heights[i])).join("")}</div>
+  <nav class="ana-amac" aria-labelledby="amac-baslik">
+    <h2 id="amac-baslik">Ne için arıyorsunuz?</h2>
+    <ul>${amaclar}</ul>
+  </nav>
 </section>
-<section class="block"><div class="block-h"><h2>Ürün türüne göre</h2><a class="small" href="/urunler/">Tüm ürünler</a></div><div class="grid-tiles">${catTiles}</div></section>
-<section class="block"><div class="block-h"><h2>Kullanım alanına göre</h2></div><div class="grid-tiles">${kolTiles}</div></section>
-<section class="block"><div class="block-h"><h2>Nasıl sipariş verilir?</h2></div>
-  <ol class="steps"><li><b>Ürünü bulun</b><span class="small muted">Arayın ya da filtreleyin; seçeneği ve adedi seçin.</span></li>
-  <li><b>Teklif sepetine ekleyin</b><span class="small muted">Birden fazla ürünü tek talepte toplayın.</span></li>
-  <li><b>Gönderin</b><span class="small muted">Sepeti WhatsApp ya da e-postayla iletin.</span></li>
-  <li><b>Onaylayın</b><span class="small muted">Fiyat, ödeme ve teslim bilgisini size dönelim.</span></li></ol></section>
-<section class="b2b">${b2b.map(([b, t]) => `<div><b>${esc(b)}</b><span class="small muted">${esc(t)}</span></div>`).join("")}</section>
-<section class="cta"><div><h2>Aradığınızı bulamadınız mı?</h2><p class="muted small">Ölçü, renk ya da adet söyleyin; uygun ürünü birlikte bulalım.</p></div>
-  <div class="btn-row">${F.whatsapp ? `<a class="btn wa" href="https://wa.me/${esc(F.whatsapp)}" target="_blank" rel="noopener noreferrer">WhatsApp'tan yazın</a>` : ""}${F.telefon ? `<a class="btn" href="${esc(S.telHref(F.telefon))}">${esc(F.telefon)}</a>` : ""}</div></section>`;
+${kapakBolum}
+<section class="ana-bolum" aria-labelledby="tur-baslik">
+  <div class="ana-bolum-bas"><h2 id="tur-baslik">Ürün türleri</h2><a href="/urun-dizini/">Ürün dizini (A–Z)</a></div>
+  <ul class="tur-dizin">${turler}</ul>
+</section>
+<section class="ana-bolum" aria-labelledby="one-baslik">
+  <div class="ana-bolum-bas"><h2 id="one-baslik">Öne çıkan ürünler</h2><a href="/urunler/">Tüm ürünler</a></div>
+  <div class="cards ana-one">${one.map(f => aileKarti(f, null, 120)).join("")}</div>
+</section>
+${caplar.length && kapakCat ? `<section class="kapak-bul" aria-labelledby="kapak-baslik">
+  <div><h2 id="kapak-baslik">Şişenize uyan kapağı bulun</h2>
+  <p>Şişenin ağız çapını seçin; o ölçüdeki kapak, pompa, sprey ve damlalıkları görün. Ağız çapı her ürün sayfasında yazar.</p></div>
+  <ul class="agizlar">${caplar.map(([g, n]) => `<li><a href="${kapakCat.url}?agiz=${encodeURIComponent(g + " mm")}">${halka(g)}<b>${g} mm</b><span>${G.fmtNum(n)} çeşit</span></a></li>`).join("")}</ul>
+</section>` : ""}
+<section class="ana-bolum siparis" aria-labelledby="siparis-baslik">
+  <h2 id="siparis-baslik">Nasıl sipariş verilir?</h2>
+  <ol class="siparis-adim">
+    <li><b>Ürünü ve adedi seçin</b><span>Arayın ya da süzün; renk, kapak ve adet seçin.</span></li>
+    <li><b>Teklif sepetine ekleyin</b><span>Birden çok ürünü tek talepte toplayın.</span></li>
+    <li><b>Sepeti gönderin</b><span>WhatsApp ya da e-postayla iletin; fiyat ve teslim bilgisini size bildirelim.</span></li>
+  </ol>
+  <ul class="guven">${guven.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+</section>
+<section class="ana-cta">
+  <div><h2>Aradığınızı bulamadınız mı?</h2><p>Ölçü, renk ve adedi yazın; uygun ürünü birlikte bulalım.</p></div>
+  <div class="btn-row">${wa ? `<a class="btn wa" href="${wa}" target="_blank" rel="noopener noreferrer">WhatsApp'tan yazın</a>` : ""}${F.telefon ? `<a class="btn" href="${esc(S.telHref(F.telefon))}">${esc(F.telefon)}</a>` : ""}</div>
+</section>`;
   const ld = [
     { "@context": "https://schema.org", "@type": "Organization", name: F.ad, url: config.siteUrl + "/", logo: config.siteUrl + "/apple-touch-icon.png",
       telephone: F.telefon || undefined, email: F.eposta || undefined,
